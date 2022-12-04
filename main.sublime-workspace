@@ -1,1 +1,532 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cli",
+				"clip-path\tproperty"
+			],
+			[
+				"pad",
+				"padding-left\tproperty"
+			],
+			[
+				"ali",
+				"text-align\tproperty"
+			],
+			[
+				"wdi",
+				"width\tproperty"
+			],
+			[
+				"tab",
+				"table-cell\tdisplay"
+			],
+			[
+				"tra",
+				"transition-delay\tproperty"
+			],
+			[
+				"ma",
+				"margin-bottom\tproperty"
+			],
+			[
+				"mar",
+				"margin-left\tproperty"
+			],
+			[
+				"decor",
+				"text-decoration\tproperty"
+			],
+			[
+				"col",
+				"color\tproperty"
+			],
+			[
+				"alig",
+				"vertical-align\tproperty"
+			],
+			[
+				"min",
+				"min-height\tproperty"
+			],
+			[
+				"backgr",
+				"background-size\tproperty"
+			],
+			[
+				"size",
+				"font-size\tproperty"
+			],
+			[
+				"padd",
+				"padding-top\tproperty"
+			],
+			[
+				"back",
+				"background-color\tproperty"
+			],
+			[
+				"text",
+				"text-align\tproperty"
+			],
+			[
+				"left",
+				"border-left\tproperty"
+			],
+			[
+				"font",
+				"font-size\tproperty"
+			],
+			[
+				"star",
+				"start_server"
+			],
+			[
+				"SER",
+				"SERVER_PORT"
+			],
+			[
+				"SERVER",
+				"SERVER_IP"
+			],
+			[
+				"bac",
+				"background-color\tproperty"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"parse",
+				"parse_body"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"daa",
+				"data"
+			],
+			[
+				"rende",
+				"render_message"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"socket",
+				"socketid"
+			],
+			[
+				"data",
+				"database_server"
+			],
+			[
+				"soc",
+				"socketid"
+			],
+			[
+				"re",
+				"render_blog"
+			],
+			[
+				"auth",
+				"authPermission"
+			],
+			[
+				"floo",
+				"floorEntity"
+			],
+			[
+				"pla",
+				"playerEntity"
+			],
+			[
+				"set",
+				"setY"
+			],
+			[
+				"pl",
+				"playerEntity"
+			],
+			[
+				"displ",
+				"displayText"
+			],
+			[
+				"karl",
+				"karlsonEntity"
+			],
+			[
+				"pr",
+				"printVector"
+			],
+			[
+				"rot",
+				"rotPointOverPoint"
+			],
+			[
+				"ve",
+				"addVector"
+			],
+			[
+				"vec",
+				"VectorGeometry"
+			],
+			[
+				"p",
+				"p_entity"
+			],
+			[
+				"kar",
+				"karlsonEntity"
+			],
+			[
+				"windo",
+				"window_height"
+			],
+			[
+				"window",
+				"window_width"
+			],
+			[
+				"read",
+				"readSocket"
+			]
+		]
+	},
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"package in",
+				"Package Control: Install Package"
+			],
+			[
+				"package re",
+				"Package Control: Remove Package"
+			],
+			[
+				"pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"plugin",
+				"Plugin Development: Profile Events"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"prett",
+				"Pretty JSON: Format and Sort JSON"
+			],
+			[
+				"format",
+				"Pretty JSON: Format JSON Lines"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"isnta",
+				"Package Control: Install Package"
+			],
+			[
+				"formatter",
+				"Formatter: Beautify With Prettier"
+			],
+			[
+				"f",
+				"Formatter: Beautify With Prettier"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"package i",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Add Channel"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"buil",
+				"Build: New Build System"
+			],
+			[
+				"theme",
+				"UI: Select Color Scheme"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/toocels/ie/programming/git/toocels.github.io/styles.css",
+		"/home/toocels/ie/programming/nodejs/toocels_web/.env",
+		"/home/toocels/ie/programming/nodejs/toocels_web/public/main.js",
+		"/home/toocels/ie/programming/nodejs/toocels_web/notes.txt",
+		"/home/toocels/ie/programming/nodejs/toocels_web/server.js",
+		"/home/toocels/ie/programming/nodejs/toocels_web/public/index.html",
+		"/home/toocels/ie/programming/nodejs/toocels_web/public/welcome/styles.css",
+		"/home/toocels/ie/programming/nodejs/toocels_web/public/welcome/index.html",
+		"/home/toocels/ie/programming/nodejs/toocels_web/public/welcome/main.js",
+		"/home/toocels/ie/programming/nodejs/toocels_web/public/welcome/style.css",
+		"/home/toocels/ie/programming/nodejs/probot_web_v2/public/common/main.js",
+		"/home/toocels/ie/programming/nodejs/toocels_web/public/style.css",
+		"/home/toocels/ie/programming/nodejs/probot_web_v2/app.js",
+		"/home/toocels/ie/programming/nodejs/toocels_web/node_modules/string_decoder/node_modules/safe-buffer/index.js",
+		"/home/toocels/ie/programming/nodejs/toocels_web/website.txt",
+		"/home/toocels/ie/programming/nodejs/toocels_web/.gitignore",
+		"/home/toocels/ie/programming/nodejs/probot_web_v2/public/main.html",
+		"/home/toocels/ie/programming/nodejs/toocels_web/main.sublime-project",
+		"/home/probottpric/ie/programming/nodejs/probot_web_v2/public/main.html",
+		"/home/probottpric/ie/programming/nodejs/probot_web_v2/public/welcome/main.html",
+		"/home/probottpric/ie/programming/nodejs/probot_web_v2/public/restricted/main.html",
+		"/home/probottpric/ie/programming/nodejs/probot_web_v2/public/master/main.html",
+		"/home/probottpric/ie/programming/nodejs/probot_web_v2/public/chat/main.html",
+		"/home/probottpric/ie/programming/nodejs/probot_web_v2/public/login/main.html",
+		"/home/probottpric/ie/programming/nodejs/probot_web_v2/public/blog/main.html",
+		"/home/probottpric/ie/programming/nodejs/probot_web_v2/public/blog/blog_create/main.html",
+		"/home/probottpric/ie/programming/nodejs/probot_web_v2/public/blog/blog_view/main.html",
+		"/home/probottpric/ie/programming/nodejs/probot_web_v2/public/404/main.html",
+		"/home/probottpric/ie/programming/nodejs/probot_web_v2/public/blog/blog_edit/main.html",
+		"/home/probottpric/ie/programming/nodejs/probot_web_v2/public/aboutMe/main.html",
+		"/home/probottpric/ie/programming/nodejs/probot_web_v2/public/blog/blog_create/main.js",
+		"/home/probottpric/ie/programming/nodejs/probot_web_v2/public/blog/blog_edit/main.js",
+		"/home/probottpric/ie/programming/nodejs/probot_web_v2/public/aboutMe/main.js",
+		"/home/probottpric/ie/programming/nodejs/probot_web_v2/public/aboutMe/main.css",
+		"/home/probottpric/ie/programming/nodejs/probot_web_v2/public/common/main.js",
+		"/home/probottpric/ie/programming/nodejs/probot_web_v2/public/master/main.js",
+		"/home/probottpric/ie/programming/nodejs/probot_web_v2/public/login/main.js",
+		"/home/probottpric/ie/programming/nodejs/probot_web_v2/public/blog/blog_view/main.js",
+		"/home/probottpric/ie/programming/nodejs/probot_web_v2/public/main.js",
+		"/home/probottpric/ie/programming/nodejs/probot_web_v2/public/blog/main.js",
+		"/home/probottpric/ie/programming/nodejs/probot_web_v2/app.js",
+		"/home/probottpric/ie/programming/nodejs/probot_web_v2/.env",
+		"/home/probottpric/internet_explorer/programming/nodejs/probot_web_v2/public/login/main.js",
+		"/home/probottpric/internet_explorer/programming/nodejs/probot_web_v2/public/login/main.html",
+		"/home/probottpric/internet_explorer/programming/nodejs/probot_web_v2/app.js",
+		"/home/probottpric/internet_explorer/programming/nodejs/probot_web_v2/public/chat/main.html",
+		"/home/probottpric/internet_explorer/programming/nodejs/probot_web_v2/public/blog/blog_create/main.js",
+		"/home/probottpric/internet_explorer/programming/nodejs/probot_web_v2/public/blog/blog_edit/main.js",
+		"/home/probottpric/internet_explorer/programming/nodejs/probot_web_v2/public/common/main.js",
+		"/home/probottpric/internet_explorer/programming/nodejs/probot_web_v2/public/blog/blog_view/main.js",
+		"/home/probottpric/internet_explorer/programming/nodejs/probot_web_v2/public/master/main.js",
+		"/home/probottpric/internet_explorer/programming/nodejs/probot_web_v2/public/master/main.html",
+		"/home/probottpric/internet_explorer/programming/nodejs/probot_web_v2/.env",
+		"/home/probottpric/internet_explorer/programming/cpp/sdl/karlson/src/box.cpp",
+		"/home/probottpric/internet_explorer/programming/cpp/sdl/karlson/include/Box.h",
+		"/home/probottpric/internet_explorer/programming/cpp/sdl/karlson/include/Player.h",
+		"/home/probottpric/internet_explorer/programming/cpp/sdl/karlson/src/player.cpp",
+		"/home/probottpric/internet_explorer/programming/cpp/sdl/karlson/src/window.cpp",
+		"/home/probottpric/internet_explorer/programming/cpp/sdl/karlson/src/entity.cpp",
+		"/home/probottpric/internet_explorer/programming/cpp/sdl/karlson/include/Entity.h",
+		"/home/probottpric/internet_explorer/programming/cpp/sdl/karlson/include/Window.h",
+		"/home/probottpric/internet_explorer/programming/python/virtual_cam/virtual_cam.py",
+		"/home/probottpric/internet_explorer/programming/cpp/sdl/karlson/main.sublime-project",
+		"/home/probottpric/internet_explorer/programming/cpp/sdl/hello_world_linux/src/main.cpp",
+		"/home/probottpric/internet_explorer/programming/cpp/sdl/hello_world_linux/MakeFileLinux",
+		"/home/probottpric/internet_explorer/programming/cpp/netowrking/echo/main.sublime-project",
+		"/home/probottpric/internet_explorer/programming/cpp/netowrking/basic/main.cpp",
+		"/media/probottpric/file_server/internet_explorer/programming/cpp/netowrking/basic/main.sublime-project",
+		"/media/probottpric/file_server/internet_explorer/programming/cpp/netowrking/basic/src/main.cpp",
+		"/media/probottpric/file_server/internet_explorer/programming/cpp/netowrking/basic/main.cpp",
+		"/media/probottpric/file_server/internet_explorer/programming/cpp/netowrking/basic/.gitignore",
+		"/media/probottpric/file_server/internet_explorer/programming/python/12th_project/v8S-sql/games/snake_game/snake_game.py",
+		"/media/probottpric/file_server/internet_explorer/programming/python/12th_project/v8S-sql/gameFiles/pygameAdds.py",
+		"/media/probottpric/file_server/internet_explorer/programming/python/12th_project/v8S-sql/gameFiles/makeLifeEasy.py",
+		"/media/probottpric/file_server/internet_explorer/programming/python/12th_project/v8S-sql/test.sublime-project",
+		"/media/probottpric/file_server/internet_explorer/programming/cpp/sdl/chess/include/Computer.h",
+		"/media/probottpric/file_server/internet_explorer/programming/cpp/sdl/chess/include/Human.h",
+		"/media/probottpric/file_server/internet_explorer/programming/cpp/sdl/chess/include/Chess.h",
+		"/media/probottpric/file_server/internet_explorer/programming/cpp/sdl/chess/src/entity.cpp",
+		"/media/probottpric/file_server/internet_explorer/programming/cpp/sdl/chess/include/RenderWindow.h",
+		"/media/probottpric/file_server/internet_explorer/programming/cpp/sdl/chess/src/renderwindow.cpp",
+		"/media/probottpric/file_server/internet_explorer/programming/cpp/sdl/collision_sim/src/renderwindow.cpp",
+		"/media/probottpric/file_server/internet_explorer/programming/cpp/sdl/mario/src/main.cpp",
+		"/media/probottpric/file_server/internet_explorer/programming/cpp/sdl/collision_sim/src/uilabel.cpp",
+		"/media/probottpric/file_server/internet_explorer/programming/cpp/sdl/collision_sim/include/uilabel.h",
+		"/media/probottpric/file_server/internet_explorer/programming/cpp/sdl/collision_sim/include/RenderWindow.h",
+		"/media/probottpric/file_server/internet_explorer/programming/cpp/sdl/collision_sim/src/entity.cpp",
+		"/media/probottpric/file_server/internet_explorer/programming/cpp/sdl/collision_sim/test.sublime-project",
+		"/media/probottpric/file_server/internet_explorer/programming/cpp/sdl/mario/MakeFileLinux",
+		"/home/probottpric/.config/sublime-text-3/Packages/CodeFormatter/CodeFormatter.sublime-settings",
+		"/home/probottpric/.config/sublime-text-3/Packages/SublimeAStyleFormatter/SublimeAStyleFormatter.sublime-settings",
+		"/home/probottpric/.config/sublime-text-3/Packages/User/CodeFormatter.sublime-settings",
+		"/home/probottpric/.config/sublime-text-3/Packages/User/Pretty JSON.sublime-settings",
+		"/home/probottpric/.config/sublime-text-3/Packages/Pretty JSON/Pretty JSON.sublime-settings",
+		"/home/probottpric/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/probottpric/.config/sublime-text-3/Packages/SublimeAStyleFormatter/Default (Linux).sublime-keymap",
+		"/home/probottpric/.config/sublime-text-3/Packages/User/SublimeAStyleFormatter.sublime-settings",
+		"/home/probottpric/.config/sublime-text-3/Packages/auto-save/auto_save.sublime-settings",
+		"/home/probottpric/.config/sublime-text-3/Packages/User/auto_save.sublime-settings",
+		"/media/probottpric/file_server/internet_explorer/tmp/sublime_test/cpp/main",
+		"/media/probottpric/file_server/internet_explorer/tmp/sublime_test/cpp/test.sublime-workspace",
+		"/media/probottpric/file_server/internet_explorer/programming/cpp/hello_world/main.cpp",
+		"/media/probottpric/file_server/internet_explorer/programming/sublime_test/proj1/hello.sublime-build",
+		"/media/probottpric/file_server/internet_explorer/programming/sublime_test/proj1/hello.sublime-project",
+		"/media/probottpric/file_server/internet_explorer/programming/sublime_test/proj1/hello.py"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 129.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"incremental_find":
+	{
+		"height": 35.0
+	},
+	"input":
+	{
+		"height": 49.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.Terminus":
+	{
+		"height": 167.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Debug",
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 220.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

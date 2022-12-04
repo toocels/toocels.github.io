@@ -21,7 +21,7 @@ nav{
 	width: 100%;
 	background-color: rgba(10,10,10, 0.9);
 	font-size: 32px;
-	padding-top: 8px;
+	padding-top: 12px;
 	padding-bottom: 8px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -40,13 +40,20 @@ nav > div{
 	float: left;
 }
 
-nav > div > a > img{
+.nav_image{
 	border-radius: 50%;
 	width: 50px;
 	margin-right: 20px;
+	transition: 0.5s;
+}
+
+.nav_image:hover{
+	border-radius: 10%;
 }
 
 nav > a:hover{
+	position: relative;
+	top: 5px;
 	color: #555555
 }
 
@@ -79,9 +86,31 @@ footer{
 	background-size: 100% 100%;
 }
 
+.jumbotron > span{
+	transition: 3s;
+	animation: floating 3s;
+	animation-iteration-count: infinite;
+	position: relative;
+}
+
 .jumbotron > span:hover{
 	position: relative;
 	bottom: 10px;
+	color: grey;
+	font-size: 100px;
+}
+
+.star{
+	font-size: 16px;
+	position: absolute;
+	bottom: 0px;
+	right: 10px;
+}
+
+@keyframes floating {
+    0% { bottom: 20px; left: -5px; }
+    50%  { bottom: 0px; left: 0px; }
+    100%   { bottom: 20px; left: -5px; }   
 }
 
 .impressionOne{
@@ -98,7 +127,16 @@ footer{
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-size: 50% 80%;
+	background-position: bottom;
+	background-size: 50% 90%;
+}
+
+.impressionOne > span{
+	transition: 0.2s;
+}
+
+.impressionOne > span:hover{
+	text-shadow: 7px 7px 10px #ccff00;
 }
 
 .separator{
@@ -106,15 +144,8 @@ footer{
 	background-color: grey;
 }
 
-.star{
-	font-size: 16px;
-	position: absolute;
-	bottom: 0px;
-	right: 10px;
-}
 
-
-@media (min-width: 0px) and (max-width: 600px) {
+@media (min-width: 0px) and (max-width: 980) {
 	nav{
 		font-size: 16px;
 	}
@@ -137,7 +168,7 @@ footer{
 		height: 60px;
 	}
 
-	nav > div > a > img{
+	.nav_image{
 		width: 30px;
 		margin-right: 15px;
 	}
