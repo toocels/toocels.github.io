@@ -1,0 +1,111 @@
+* {
+	box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* only for Chrome, Safari, and Opera */
+}
+
+body{
+	padding: 0px;
+	margin: 0px;
+	color: white;
+	font-size: 32px;
+	font-weight: 800;
+	background-color: black;
+	scroll-behavior: smooth;
+}
+
+nav{
+	position: fixed;
+	width: 100%;
+	background-color: rgba(10,10,10, 0.9);
+	font-size: 32px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+nav > a{
+	margin-left: 25px;
+	color: white;
+	text-decoration: none;
+	float: right;
+	vertical-align: middle;
+	transition: 0.4s;
+}
+
+nav > div{
+	float: left;
+}
+
+nav > div > a > img{
+	border-radius: 50%;
+	width: 50px;
+	margin-right: 20px;
+}
+
+nav > a:hover{
+	color: #555555
+}
+
+footer{
+	height: 100px;
+	background-color: #0A0A0A;
+	bottom: 0px;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 0px;
+	text-align: center;
+}
+
+.jumbotron{
+	height: 750px;
+	text-align: center;
+	padding-top: 260px;
+	line-height: 100px;
+	font-size: 64px;
+	text-shadow: 16px 16px 2px #000000;
+
+	background-image: url("imgs/brick_wall.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-size: 100% 100%;
+}
+
+.jumbotron > span:hover{
+	position: relative;
+	bottom: 10px;
+}
+
+.impressionOne{
+	color: white;
+	height: 750px;
+	line-height: 100px;
+	padding-top: 150px;
+	font-size: 90px;
+	text-shadow: 2px 2px #00ff00;
+
+	background-image: url("imgs/look_to_the_side.jpeg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-size: 50% 80%;
+}
+
+.separator{
+	height: 10px;
+	background-color: grey;
+}
+
+.star{
+	font-size: 16px;
+	position: absolute;
+	bottom: 0px;
+	right: 10px;
+}
