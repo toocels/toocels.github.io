@@ -1,0 +1,14 @@
+{
+    "build_systems": [{
+        "cmd": ["sudo node server.js"],
+        "name": "Debug",
+        "shell": true,
+        "working_dir": "$folder"
+    }],
+    "folders": [{
+        "path": "bin/.."
+    }],
+    "settings": {
+        "tab_size": 4
+    }
+}
