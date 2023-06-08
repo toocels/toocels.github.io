@@ -1,0 +1,80 @@
+footer {
+	background-color: #0d0d0d;
+	color: white;
+	padding: 20px;
+}
+
+footer .top {
+	margin: 30px 40px;
+	display: flex;
+	justify-content: space-between;
+}
+
+footer .top .right {
+	width: 50%;
+}
+
+footer .top a {
+	display: inline-block;
+	text-decoration: none;
+	font-size: 20px;
+	color: white;
+	width: 30%;
+	text-align: right;
+}
+
+footer .heading {
+	font-size: 60px;
+}
+
+footer .slogan {
+	font-size: 25px;
+}
+
+footer .bottom {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 40px;
+}
+
+footer .copyright {
+	text-align: center;
+	margin: 10px;
+}
+
+footer .bottom img {
+	fill: red;
+	height: 40px;
+	margin: 5px 10px;
+	opacity: 0.7;
+	transition: 0.3s;
+}
+
+footer .bottom img:hover {
+	opacity: 1;
+}
+
+@media(max-width: 768px) {
+
+	footer {
+		padding: 10px;
+	}
+
+	footer .bottom img {
+		height: 25px;
+	}
+
+	footer .top {
+		justify-content: center;
+		margin: 10px;
+	}
+
+	footer .top .right {
+		display: none;
+	}
+
+	footer .bottom {
+		margin: 20px;
+	}
+}

@@ -1,0 +1,69 @@
+main {
+	height: 100vh;
+	overflow: hidden;
+	background-image: url("/images/spongemob-landscape.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: top right;
+}
+
+main {
+	display: flex;
+	align-items: center;
+}
+
+main .heading {
+	color: white;
+	font-size: 85px;
+	padding: 10px;
+	width: 100%;
+	text-align: center;
+	background-color: rgba(0, 255, 255, 0.6);
+	transition: background-color 1s;
+}
+
+main .heading:hover {
+	background-color: rgba(255, 255, 0, 0.6);
+}
+
+main .arrow {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding: 10px;
+	color: rgb(0, 255, 255);
+	font-size: 80px;
+	text-decoration: none;
+	transition: color 1s;
+}
+
+main .arrow:hover {
+	color: rgb(255, 255, 0);
+}
+
+footer {
+	color: white;
+}
+
+@media(max-width: 992px) {
+	main .heading {
+		font-size: 70px;
+	}
+
+	main {
+
+		background-position: center center;
+	}
+}
+
+@media(max-width: 768px) {
+	main .heading {
+		font-size: 50px;
+	}
+}
+
+@media(max-width: 480px) {
+	main {
+		background-image: url("images/spongemob-potrait.jpg");
+	}
+}

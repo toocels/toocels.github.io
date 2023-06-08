@@ -1,41 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 	<title>Toocels</title>
-	<link class="test" rel="icon" type="image/x-icon" href="/imgs/awesome_circle.png">
-
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script type="text/javascript" src="main.js"></script>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/x-icon" href="/images/git.png">
+
+	<link rel="stylesheet" type="text/css" href="/bp/body.css">
+	<link rel="stylesheet" type="text/css" href="/bp/navbar/navbar.css">
+	<link rel="stylesheet" type="text/css" href="/bp/footer/footer.css">
+	<link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
+
 <body>
-	<header>
-		<nav>
-			<div><a href="/"><img class="nav_image" src="/imgs/awesome.png"></a></div>
-			<a href="/welcome">Welcome</a>
-			Toocels
-		</nav>
-	</header>
 
-	<div  class="jumbotron">
-		<span>Hi,</span><span> I'm</span><span> toocels</span><span> :D</span>
-		<br>
-		<span>Just</span> <span>two</span> <span>brain</span> <span>cells</span> <span>fused</span> <span>together</span>
-		<div class="star">*TooCels cuz TwoCells was taken</div>
-	</div>
+	<div w3-include-html="/bp/navbar/navbar.html"></div>
 
-	<div class="separator"></div>
+	<main>
+		<div class="heading">Just Two Brain Cells</div>
+		<a class="arrow" href="#footer">&#x21E3;</a>
+	</main>
 
-	<div class="impressionOne">
-		<span>Yes,</span><span> this</span><span> is</span><span> me.</span><br>
-		<span>Yes,</span><span> this</span><span> is</span><span> a</span><span> bad</span><span> example.</span><br>
-		<span>Yes,</span><span> you</span><span> can</span><span> now</span><span> scroll</span><span> down</span><span> now.</span><br>
-	</div>
+	<div id="footer" w3-include-html="/bp/footer/footer.html"></div>
 
-	<footer>
-		My contact: toocels@gmail.com
-		<br>
-		© Copyright Toocels 2000
-	</footer>
+	<script type="text/javascript" src="/bp/navbar/navbar.js"></script>
+	<script type="text/javascript" src="./script.js"></script>
 </body>
+
 </html>
