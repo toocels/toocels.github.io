@@ -1,4 +1,4 @@
-main {
+.landing {
 	height: 100vh;
 	overflow: hidden;
 	background-image: url("/images/spongemob-landscape.jpg");
@@ -7,12 +7,12 @@ main {
 	background-position: top right;
 }
 
-main {
+.landing {
 	display: flex;
 	align-items: center;
 }
 
-main .heading {
+.landing .heading {
 	color: white;
 	font-size: 85px;
 	padding: 10px;
@@ -22,11 +22,11 @@ main .heading {
 	transition: background-color 1s;
 }
 
-main .heading:hover {
+.landing .heading:hover {
 	background-color: rgba(255, 255, 0, 0.6);
 }
 
-main .arrow {
+.landing .arrow {
 	position: absolute;
 	right: 0;
 	bottom: 0;
@@ -37,33 +37,115 @@ main .arrow {
 	transition: color 1s;
 }
 
-main .arrow:hover {
+.landing .arrow:hover {
 	color: rgb(255, 255, 0);
 }
 
-footer {
-	color: white;
-}
-
 @media(max-width: 992px) {
-	main .heading {
+	.landing .heading {
 		font-size: 70px;
 	}
 
-	main {
+	.landing {
 
 		background-position: center center;
 	}
 }
 
 @media(max-width: 768px) {
-	main .heading {
+	.landing .heading {
 		font-size: 50px;
 	}
 }
 
 @media(max-width: 480px) {
-	main {
-		background-image: url("images/spongemob-potrait.jpg");
+	.landing {
+		background-image: url("/images/spongemob-potrait.jpg");
 	}
+}
+
+.whoami {
+	background-color: #0d0d0d;
+	height: 500px;
+	display: flex;
+	color: white;
+}
+
+.whoami .left {
+	position: relative;
+	width: 60%;
+	padding: 40px;
+}
+
+.whoami .heading {
+	font-size: 50px;
+	margin-bottom: 30px;
+}
+
+.whoami .text {
+	font-size: 20px;
+}
+
+.whoami .bottom {
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 40px;
+}
+
+.whoami .right {
+	background-image: url("/images/look_at_camera.jpeg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100%;
+	width: 40%;
+}
+
+@media(max-width:768px) {
+
+	.whoami .right,
+	.whoami .left {
+		width: 50%;
+	}
+
+	.whoami {
+		height: 400px;
+	}
+
+	.whoami .heading {
+		font-size: 30px;
+	}
+
+	.whoami .text {
+		font-size: 16px;
+	}
+}
+
+@media(max-width:480px) {
+	.whoami{
+		height: 200px;
+	}
+
+	.whoami .left{
+		padding: 15px;
+	}
+
+	.whoami .heading{
+		margin-bottom: 0;
+		font-size: 20px;
+	}
+
+	.whoami .text{
+		font-size: 16px;
+	}
+	/*	.whoami{
+		flex-direction: column-reverse;
+		height: initial;
+	}
+
+	.whoami .right{
+		width: 100%;
+		background-size: contain;
+		height: 100px;
+	}*/
 }
