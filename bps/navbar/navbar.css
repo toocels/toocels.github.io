@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap');
+@font-face {
+	font-family: 'Cairo';
+	src: url('/fonts/Cairo.ttf') format('truetype');
+}
 
 /* NAV BAR START */
 nav {
@@ -38,6 +41,7 @@ nav a {
 	max-height: 50px;
 	transition: 0.5s;
 	font-weight: 700;
+	letter-spacing: 0.1em;
 }
 
 nav a:hover {
@@ -93,7 +97,7 @@ nav img:hover {
 		top: 70px;
 		right: -250px;
 		width: 200px;
-		height: 100vh;
+		height: 120vh;
 		padding: 20px;
 		background-color: rgba(0, 0, 0, 0.5);
 		transition: 0.7s;

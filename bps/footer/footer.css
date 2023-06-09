@@ -12,6 +12,9 @@ footer .top {
 
 footer .top .right {
 	width: 50%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
 }
 
 footer .top a {
@@ -20,7 +23,7 @@ footer .top a {
 	font-size: 20px;
 	color: white;
 	width: 30%;
-	text-align: right;
+/*	text-align: right;*/
 }
 
 footer .heading {

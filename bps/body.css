@@ -2,8 +2,11 @@ html {
 	scroll-behavior: smooth;
 }
 
-body {
+* {
 	box-sizing: border-box;
+}
+
+body {
 	margin: 0;
 	min-width: 280px;
 	max-width: 100%;

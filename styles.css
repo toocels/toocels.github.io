@@ -74,7 +74,7 @@
 .whoami .left {
 	position: relative;
 	width: 60%;
-	padding: 40px;
+	padding: 50px;
 }
 
 .whoami .heading {
@@ -92,13 +92,30 @@
 	margin-bottom: 40px;
 }
 
+@keyframes change-bg {
+	0% {
+		background-color: #ddd;
+	}
+
+	50% {
+		background-color: #fff;
+	}
+
+	100% {
+		background-color: #ddd;
+	}
+}
+
 .whoami .right {
-	background-image: url("/images/look_at_camera.jpeg");
+	background-color: grey;
+	background-image: url("/images/distracted.png");
 	background-size: cover;
-	background-repeat: no-repeat;
 	background-position: center;
 	height: 100%;
 	width: 40%;
+	animation-name: change-bg;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
 }
 
 @media(max-width:768px) {
@@ -122,30 +139,24 @@
 }
 
 @media(max-width:480px) {
-	.whoami{
+	.whoami {
 		height: 200px;
 	}
 
-	.whoami .left{
+	.whoami .left {
 		padding: 15px;
 	}
 
-	.whoami .heading{
+	.whoami .heading {
 		margin-bottom: 0;
 		font-size: 20px;
 	}
 
-	.whoami .text{
+	.whoami .text {
 		font-size: 16px;
 	}
-	/*	.whoami{
-		flex-direction: column-reverse;
-		height: initial;
-	}
 
-	.whoami .right{
-		width: 100%;
-		background-size: contain;
-		height: 100px;
-	}*/
+	.landing .arrow {
+		font-size: 40px;
+	}
 }
