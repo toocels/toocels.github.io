@@ -1,0 +1,47 @@
+.memes-container{
+	margin: auto;
+	margin-top: 70px;
+	color: white;
+	max-width: 1170px;
+	padding: 15px;
+	text-align: center;
+	font-size: 70px;
+}
+
+.memes-container .images img{
+	background-color: cyan;
+	margin: 0;
+	padding: 0;
+	transition: 0.7s;
+	transition-property: transform;
+	z-index: 1;
+	position: relative;
+}
+
+.memes-container .images img:hover{
+	translate: ;
+	transform: scale(1.25);
+	z-index: 2;
+}
+
+.memes-container .meme-alter{
+	display: flex;
+	justify-content: space-between;
+}
+.memes-container .meme-alter button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  border: none;
+  text-align: center;
+  font-size: 28px;
+  padding: 10px 20px;
+  transition: 0.5s;
+  max-width: 200px;
+  margin: 15px auto;
+}
+
+.memes-container .meme-alter button:hover {
+  scale: 1.1;
+}

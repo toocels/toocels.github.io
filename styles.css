@@ -1,5 +1,5 @@
 .landing {
-	height: 100vh;
+	height: 100dvh;
 	overflow: hidden;
 	background-image: url("/images/spongemob-landscape.jpg");
 	background-attachment: fixed;
@@ -65,10 +65,13 @@
 }
 
 .whoami {
+	max-width: 1170px;
+	margin: auto;
 	background-color: #0d0d0d;
 	height: 500px;
 	display: flex;
 	color: white;
+	padding: 15px;
 }
 
 .whoami .left {
@@ -116,6 +119,14 @@
 	animation-name: change-bg;
 	animation-duration: 3s;
 	animation-iteration-count: infinite;
+}
+
+.whoami>div {
+	transition: transform 1s;
+}
+
+.whoami>div:hover {
+	transform: scale(1.1);
 }
 
 @media(max-width:768px) {

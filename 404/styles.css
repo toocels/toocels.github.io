@@ -3,7 +3,7 @@
 	color: white;
 	background-image: url("/images/explosion_landscape.jpg");
 	background-position: center;
-	height: 100vh;
+	height: 100dvh;
 	background-size: cover;
 	background-repeat: no-repeat;
 	display: flex;
@@ -23,6 +23,7 @@
 .notfound .text2 {
 	font-size: 30px;
 	font-weight: 700;
+	text-align: center;
 }
 
 @media(max-width:768px) {

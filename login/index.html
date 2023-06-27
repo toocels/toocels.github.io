@@ -15,35 +15,30 @@
 <body>
 
 	<div w3-include-html="/bps/navbar/navbar.html"></div>
-
-<main>
-	<div class="landing">
-		<div class="heading">Just Two Brain Cells</div>
-		<a class="arrow" href="#footer">&#x21E3;</a>
-	</div>
-
-	<div class="whoami">
-		<div class="left">
-			<div class="heading">Yes, thats me &#x21E2;</div>
-			<div class="text">
-				<div class="top">
-					I like diy and tech :D<br>
-					and thats it... :/
-				</div>
-				<span class="bottom">
-					And i like to draw.
-				</span>
-
-			</div>
+	<main>
+	<div class="login">
+		<div class="login_heading">LOGIN</div>
+		<div class="giving_inputs">
+			<div><span>Username:<span><input type="text" class="username" id="username"></div>
+			<div><span>Password:<span><input type="password" class="password" id="password"></div>
+			<div class="login_req_reply"></div>
 		</div>
-		<div class="right"></div>
+
+		<button class="submit_button" onclick="login_button()">Submit</button>
+
+		<div>
+			<a href="#">Forgot Password</a>
+			<a href="#">Forgot Username</a>
+		</div>
+
 	</div>
 	</main>
 
-	<div id="footer" w3-include-html="/bps/footer/footer.html"></div>
+	<div class="footer" w3-include-html="/bps/footer/footer.html"></div>
 
 	<script type="text/javascript" src="/scripts/include_html.js"></script>
 	<script type="text/javascript" src="/bps/navbar/navbar.js"></script>
+	<script type="text/javascript" src="/extras/functions.js"></script>
 	<script type="text/javascript" src="./script.js"></script>
 </body>
 

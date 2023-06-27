@@ -5,6 +5,7 @@ window.onscroll = () => {
 	// if scroll, minimise options
 	document.querySelector('.options').classList.remove("options-active");
 	document.querySelector('.hamburger').classList.remove("hamburger-active")
+	document.querySelector("main").style.opacity = "1";
 
 	// if scroll down, hide navbar
 	if (prevScrollpos > currentScrollPos) document.querySelector("nav").style.transform = 'translateY(0%)';
@@ -14,19 +15,19 @@ window.onscroll = () => {
 }
 
 includeHTML();
+document.querySelector("main").style.transition = "0.7s";
 window.addEventListener('load', () => {
 	const hamburger = document.querySelector('.hamburger');
 	const options = document.querySelector('.options');
 	hamburger.addEventListener('click', () => {
 		options.classList.toggle("options-active");
 		hamburger.classList.toggle("hamburger-active")
+		if (document.querySelector("main").style.opacity == "0.5")
+			document.querySelector("main").style.opacity = "1";
+		else
+			document.querySelector("main").style.opacity = "0.5";
 	});
 });
-
-//
-//
-//
-//
 
 try {
 	authUserWServer()
@@ -41,8 +42,7 @@ try {
 function login_logout() {
 	if (getCookie("username") == null) {
 		window.location.pathname = "/login/"
-	}
-	else {
+	} else {
 		setCookie('username', '', '/', -1)
 		setCookie('password', '', '/', -1)
 		window.location.pathname = "/"
