@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    height: 100vh;
+    background-image: url('/images/restricted.jpg');
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px grey;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+/********** Large **********/
+@media (min-width: 1200px) {}
+
+/********** Medium **********/
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+/********** Small **********/
+@media (min-width: 768px) and (max-width: 991px) {}
+
+/********** Extra small **********/
+@media (max-width: 767px) {}
+
+/********** Super extra small **********/
+@media (max-width: 479px) {}
