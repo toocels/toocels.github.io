@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Toocels</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link class="test" rel="icon" type="image/x-icon" href="/images/awesome_circle.png">
+
+    <!-- <link rel="stylesheet" href="/extras/bootstrap_css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="/extras/common/basic_styles.css"> -->
+    <link rel="stylesheet" type="text/css" href="/navbar/navbar.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <div w3-include-html="/bps/navbar/navbar.html"></div>
+
+    <main>
+
+        <div id="information">
+            Heading:<input id="heading" value="Heading1"><br>
+            Head Image:<input id="head_image" value="car.png"><br>
+            Description:<input id="description" value="desc1"><br>
+        </div>
+
+        <div id="blog_content">
+        </div>
+
+        <div id="controls">
+            <button id="add_text_block">Add text block</button>
+            <button id="add_image_block">Add image block</button>
+            <br>
+            <button id="submit_blog">Submit</button>
+        </div>
+
+    </main>
+
+    <div id="footer" w3-include-html="/bps/footer/footer.html"></div>
+
+    <script type="text/javascript" src="/bps/scripts/functions.js"></script>
+    <script type="text/javascript" src="/bps/scripts/include_html.js"></script>
+    <script type="text/javascript" src="/navbar/navbar.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

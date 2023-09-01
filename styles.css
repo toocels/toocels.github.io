@@ -1,5 +1,5 @@
 .landing {
-    height: 100lvh;
+    min-height: 100lvh;
     overflow: hidden;
     background-image: url("/images/spongemob-landscape.jpg");
     background-attachment: fixed;

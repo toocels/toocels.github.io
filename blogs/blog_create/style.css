@@ -1,0 +1,39 @@
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+	background-color: grey;
+}
+
+main{
+	font-weight: bold;
+	border-top-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	width: 90%;
+	margin: auto;
+	margin-top: 30px;
+	padding: 40px;
+	background-color: white;
+}
+
+#information{
+	font-size: 25px;
+}
+
+#information input{
+	margin: 15px;
+}
+
+#blog{
+	margin: 20px;
+}
+
+input{
+	margin: 10px;
+}

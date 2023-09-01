@@ -1,0 +1,170 @@
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
+
+body {
+	background-color: rgb(50, 50, 50);
+	color: white;
+}
+
+header {
+	font-weight: bold;
+	width: 100%;
+	max-width: 1170px;
+	margin: auto;
+	margin-top: 70px;
+	padding: 15px
+}
+
+#page_heading {
+	font-size: 64px;
+	text-align: center;
+}
+
+#blog_top_part {
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin: 20px 20px;
+}
+
+#search_blogs {
+	font-size: 32px;
+}
+
+#search_blogs_field {
+	margin-left: 20px;
+	width: 130px;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	background-color: rgb(200, 200, 200);
+	background-image: url('/images/searchicon.png');
+	background-size: 25px 25px;
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	padding: 12px 20px 12px 40px;
+	transition: width 0.4s ease-in-out;
+}
+
+#search_blogs_field:focus {
+	width: 60%;
+}
+
+#new_blog_add {
+	position: absolute;
+	right: 0px;
+}
+
+#new_blog_add {
+	border-radius: 4px;
+	background-color: #484848;
+	border: none;
+	color: white;
+	font-weight: bold;
+	font-size: 24px;
+	padding: 7px;
+	padding-left: 15px;
+	padding-right: 15px;
+	cursor: pointer;
+	margin-right: 10px;
+	opacity: 1;
+	transition-duration: 0.5s;
+}
+
+#new_blog_add:hover {
+	opacity: 0.6;
+}
+
+/* BLOG BLOG BLOG BLOG BLOG */
+
+main {
+	width: 100%;
+	max-width: 1170px;
+	margin: auto;
+	padding: 15px;
+}
+
+
+#blog_x {
+	position: relative;
+	transition: transform 0.5s;
+	background-color: rgb(40, 40, 40);
+	border-bottom-right-radius: 20px;
+	border-top-left-radius: 20px;
+	padding: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+#all_blogs hr {
+	/*height: 5px;*/
+	margin: 0;
+}
+
+#blog_x:hover {
+	transform: translateX(20px);
+}
+
+#blog_details {
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+	font-weight: bolder;
+}
+
+#blog_time {
+	position: absolute;
+	right: 20px;
+}
+
+#blog_delete,
+#blog_edit {
+	float: right;
+	margin-right: 15px;
+}
+
+#blog_description {
+	margin-left: 90px;
+	font-size: 20px;
+}
+
+#blog_buttons {
+	display: inline-block;
+	width: 100%;
+}
+
+#blog_buttons button {
+	border-radius: 4px;
+	background-color: #484848;
+	border: none;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	padding: 7px;
+	padding-left: 15px;
+	padding-right: 15px;
+	cursor: pointer;
+	margin-right: 10px;
+	opacity: 1;
+	transition-duration: 0.5s;
+}
+
+#blog_buttons button:hover {
+	opacity: 0.6;
+}
+
+#blog_image {
+	margin-right: 20px;
+	width: 70px;
+	height: 70px;
+}
+
+/* BLOG BLOG BLOG BLOG BLOG */

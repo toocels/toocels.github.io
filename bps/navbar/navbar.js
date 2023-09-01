@@ -1,53 +1,36 @@
-addEventListener("DOMContentLoaded", _ => {
+var prevScrollpos = window.pageYOffset;
 
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = () => {
-        var currentScrollPos = window.pageYOffset;
+includeHTML();
 
-        // if scroll, minimise options
-        document.querySelector('.options').classList.remove("options-active");
-        document.querySelector('.hamburger').classList.remove("hamburger-active")
-        document.querySelector("main").style.opacity = "1";
+window.onscroll = () => {
+    var currentScrollPos = window.pageYOffset;
 
-        // if scroll down, hide navbar
-        if (prevScrollpos > currentScrollPos) document.querySelector("nav").style.transform = 'translateY(0%)';
-        else document.querySelector("nav").style.transform = 'translateY(-100%)';
+    // if scroll, minimise options
+    document.querySelector('.options').classList.remove("options-active");
+    document.querySelector('.hamburger').classList.remove("hamburger-active")
+    document.querySelector("main").style.opacity = "1";
+    document.querySelector("footer").style.opacity = "1";
 
-        prevScrollpos = currentScrollPos;
-    }
+    // if scroll down, hide navbar
+    if (prevScrollpos > currentScrollPos) document.querySelector("nav").style.transform = 'translateY(0%)';
+    else document.querySelector("nav").style.transform = 'translateY(-100%)';
 
-    includeHTML();
-    document.querySelector("main").style.transition = "0.7s";
-    window.addEventListener('load', () => {
-        const hamburger = document.querySelector('.hamburger');
-        const options = document.querySelector('.options');
-        hamburger.addEventListener('click', () => {
-            options.classList.toggle("options-active");
-            hamburger.classList.toggle("hamburger-active")
-            if (document.querySelector("main").style.opacity == "0.5")
-                document.querySelector("main").style.opacity = "1";
-            else
-                document.querySelector("main").style.opacity = "0.5";
-        });
-    });
+    prevScrollpos = currentScrollPos;
+}
 
-    try {
-        authUserWServer()
-            .then((res) => {
-                if (res) {
-                    var login_dom = document.getElementById("nav_pages").getElementsByTagName("button")[0];
-                    login_dom.innerHTML = "logout"
-                }
-            })
-    } catch (err) {}
+window.onload = () => {
+    const hamburger = document.querySelector('.hamburger');
+    const options = document.querySelector('.options');
 
-    function login_logout() {
-        if (getCookie("username") == null) {
-            window.location.pathname = "/login/"
+    hamburger.addEventListener('click', () => {
+        options.classList.toggle("options-active");
+        hamburger.classList.toggle("hamburger-active")
+        if (document.querySelector("main").style.opacity == "0.5") {
+            document.querySelector("main").style.opacity = "1";
+            document.querySelector("footer").style.opacity = "1";
         } else {
-            setCookie('username', '', '/', -1)
-            setCookie('password', '', '/', -1)
-            window.location.pathname = "/"
+            document.querySelector("main").style.opacity = "0.5";
+            document.querySelector("footer").style.opacity = "0.5";
         }
-    }
-})
+    });
+};
