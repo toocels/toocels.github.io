@@ -1,10 +1,9 @@
 .landing {
-    min-height: 100lvh;
+    height: 100lvh;
     overflow: hidden;
-    background-image: url("/images/spongemob-landscape.jpg");
+    background-image: url("/images/spongemob.jpeg");
     background-attachment: fixed;
-    background-size: cover;
-    background-position: top right;
+    background-position: top;
 }
 
 .landing {
@@ -45,22 +44,15 @@
     .landing .heading {
         font-size: 70px;
     }
-
-    .landing {
-
-        background-position: center center;
-    }
 }
 
 @media(max-width: 768px) {
+    .landing {
+        background-position: top;
+    }
+
     .landing .heading {
         font-size: 50px;
-    }
-}
-
-@media(max-width: 480px) {
-    .landing {
-        background-image: url("/images/spongemob-potrait.jpg");
     }
 }
 
@@ -111,7 +103,7 @@
 
 .whoami .right {
     background-color: grey;
-    background-image: url("/images/distracted.png");
+    background-image: url("/images/distracted2.png");
     background-size: cover;
     background-position: center;
     height: 100%;
