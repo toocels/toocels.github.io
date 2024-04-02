@@ -8,6 +8,8 @@ authUserWServer()
 	.then((res) => {
 		if (!res)
 			window.location.pathname = "/restricted/"
+		else
+			document.querySelector("body").style.display = "block"
 	})
 
 routeRequest("POST", '', JSON.stringify({
@@ -50,7 +52,7 @@ function deleteBlog(id) {
 }
 
 function editBlog(id) {
-	window.location.href = window.location.origin + "/blogs/blog_edit?id=" + id
+	window.location.href = window.location.origin + "/blogs/blog-edit?id=" + id
 }
 
 function renderBlogs() {
@@ -100,7 +102,7 @@ function add_blog(blog) {
 	blog_buttons.appendChild(blog_edit)
 
 	blog_heading.innerHTML = blog.heading
-	blog_image.setAttribute("src", "/blogs/blog_images/" + blog.head_image)
+	blog_image.setAttribute("src", "/blogs/blog-images/" + blog.head_image)
 	blog_time.innerHTML = blog.time_stamp
 	blog_description.innerHTML = blog.description
 
@@ -116,7 +118,7 @@ function add_blog(blog) {
 
 	blog_x.appendChild(blog_details)
 	blog_x.appendChild(blog_buttons)
-	blog_details.setAttribute("onclick", 'window.location.href = window.location.origin + "/blogs/blog_view?id=' + blog.id + '"')
+	blog_details.setAttribute("onclick", 'window.location.href = window.location.origin + "/blogs/blog-view?id=' + blog.id + '"')
 
 	document.getElementById("all_blogs").appendChild(blog_x)
 	document.getElementById("all_blogs").appendChild(document.createElement("hr"))

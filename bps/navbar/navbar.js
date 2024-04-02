@@ -1,7 +1,5 @@
 var prevScrollpos = window.pageYOffset;
 
-includeHTML();
-
 window.onscroll = () => {
     var currentScrollPos = window.pageYOffset;
 
@@ -18,19 +16,14 @@ window.onscroll = () => {
     prevScrollpos = currentScrollPos;
 }
 
-window.onload = () => {
-    const hamburger = document.querySelector('.hamburger');
-    const options = document.querySelector('.options');
-
-    hamburger.addEventListener('click', () => {
-        options.classList.toggle("options-active");
-        hamburger.classList.toggle("hamburger-active")
-        if (document.querySelector("main").style.opacity == "0.5") {
-            document.querySelector("main").style.opacity = "1";
-            document.querySelector("footer").style.opacity = "1";
-        } else {
-            document.querySelector("main").style.opacity = "0.5";
-            document.querySelector("footer").style.opacity = "0.5";
-        }
-    });
-};
+document.querySelector('.hamburger').addEventListener('click', () => {
+    document.querySelector('.options').classList.toggle("options-active");
+    document.querySelector('.hamburger').classList.toggle("hamburger-active")
+    if (document.querySelector("main").style.opacity == "0.5") {
+        document.querySelector("main").style.opacity = "1";
+        document.querySelector("footer").style.opacity = "1";
+    } else {
+        document.querySelector("main").style.opacity = "0.5";
+        document.querySelector("footer").style.opacity = "0.5";
+    }
+});

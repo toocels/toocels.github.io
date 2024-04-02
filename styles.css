@@ -1,9 +1,10 @@
 .landing {
     height: 100lvh;
     overflow: hidden;
-    background-image: url("/images/spongemob.jpeg");
+    background-image: url("/images/explosion-landscape.jpg");
     background-attachment: fixed;
-    background-position: top;
+    background-position: center;
+    background-size: cover;
 }
 
 .landing {
@@ -103,7 +104,7 @@
 
 .whoami .right {
     background-color: grey;
-    background-image: url("/images/distracted2.png");
+    background-image: url("/images/distracted.png");
     background-size: cover;
     background-position: center;
     height: 100%;

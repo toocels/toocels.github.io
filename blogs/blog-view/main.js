@@ -25,7 +25,7 @@ routeRequest("POST", '', JSON.stringify({
 		else {
 			var node = document.createElement("div")
 			image = document.createElement("img")
-			image.setAttribute("src", "/blogs/blog_images/" + content[i]["img"])
+			image.setAttribute("src", "/blogs/blog-images/" + content[i]["img"])
 			image.setAttribute("height", "75px")
 			image.setAttribute("width", "75px")
 			node.appendChild(image)
