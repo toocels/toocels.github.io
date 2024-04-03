@@ -1,5 +1,5 @@
 .landing {
-    height: 100lvh;
+    /*height: 100lvh;*/
     overflow: hidden;
     background-image: url("/images/explosion-landscape.jpg");
     background-attachment: fixed;
@@ -90,27 +90,31 @@
 
 @keyframes change-bg {
     0% {
-        background-color: #ff99e6;
+        background-color: #aacc44;
     }
 
-    50% {
-        background-color: #ffff80;
+    33% {
+        background-color: #44aacc;
+    }
+
+    66% {
+        background-color: #cc44aa;
     }
 
     100% {
-        background-color: #ff99e6;
+        background-color: #aacc44;
     }
 }
 
 .whoami .right {
     background-color: grey;
-    background-image: url("/images/distracted.png");
+    background-image: url("/images/look-left.png");
     background-size: cover;
     background-position: center;
     height: 100%;
     width: 40%;
     animation-name: change-bg;
-    animation-duration: 4s;
+    animation-duration: 7s;
     animation-iteration-count: infinite;
 }
 

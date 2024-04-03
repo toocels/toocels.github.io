@@ -1,5 +1,5 @@
 window.addEventListener('load', function() {
 	setTimeout(function() {
 		window.history.back();
-	}, 5000);
+	}, 3000);
 });
