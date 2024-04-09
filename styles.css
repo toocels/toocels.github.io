@@ -1,11 +1,10 @@
 .landing {
-    /*height: 100lvh;*/
     overflow: hidden;
     background-image: url("/images/explosion-landscape.jpg");
     background-attachment: fixed;
     background-position: center;
-    background-size: cover;
-    height: 100lvh;
+    background-size: 100% auto;
+    height: 100vh;
 }
 
 .landing {
@@ -42,6 +41,12 @@
     color: rgb(255, 255, 0);
 }
 
+@media(max-width: 1170px) {
+    .landing {
+        background-size: auto 100%;
+    }
+}
+
 @media(max-width: 992px) {
     .landing .heading {
         font-size: 70px;
@@ -49,10 +54,6 @@
 }
 
 @media(max-width: 768px) {
-    .landing {
-        background-position: top;
-    }
-
     .landing .heading {
         font-size: 50px;
     }
