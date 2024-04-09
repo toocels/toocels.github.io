@@ -1,9 +1,8 @@
 .landing {
     overflow: hidden;
     background-image: url("/images/explosion-landscape.jpg");
-    background-attachment: fixed;
     background-position: center;
-    background-size: 100% auto;
+    background-size: cover;
     height: 100vh;
 }
 
@@ -43,7 +42,7 @@
 
 @media(max-width: 1170px) {
     .landing {
-        background-size: auto 100%;
+        /*background-size: auto 100%;*/
     }
 }
 
