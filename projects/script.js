@@ -49,10 +49,12 @@ var projects = [{
 }, {
 	"head": "E-Cell Website",
 	"text": "Created for my college club, E-Cell, in collaboration with another club member. Primarily focused on CSS work, with technical aspects including email verification for KYC and newsletter sign-ups.",
+	"link": "https://ecellsastra.org/",
 	"img": "./banners/ecell.png"
 }, {
 	"head": "Daksh Website",
-	"text": "A project involving extensive backend work. Features include transaction verification, admin editing capabilities, all dynamically loaded and stored in MongoDB, and hosted by Next.js. A significant real-world application.",
+	"text": "A project involving extensive backend work. Features include transaction verification, admin editing capabilities, all dynamically loaded and stored in MongoDB, and hosted by Next.js. A significant real-world application. ",
+	"link": "https://daksh.sastra.edu/",
 	"img": "./banners/daksh.png"
 }]
 
@@ -63,6 +65,15 @@ for (var i = 0; i < projects.length; i++) {
 	clone.style.display = "flex"
 	clone.querySelector(".head").innerHTML = projects[i].head
 	clone.querySelector(".text").innerHTML = projects[i].text
+
+	if (projects[i].link) {
+		let link = document.createElement("a")
+		link.href = projects[i].link
+		link.innerHTML = "link"
+		link.target = "_blank"
+		clone.querySelector(".text").appendChild(link)
+	}
+
 	clone.querySelector(".right-img").src = projects[i].img
 	elem.after(clone);
 }

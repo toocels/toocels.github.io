@@ -26,8 +26,8 @@ nav .nav-container {
     justify-content: space-between;
 }
 
-nav .left,
-nav .right {
+nav .nav-left,
+nav .nav-right {
     display: flex;
     align-items: center;
 }
@@ -65,7 +65,7 @@ nav img:hover {
 }
 
 @media(max-width:768px) {
-    nav .right>a {
+    nav .nav-right>a {
         display: none;
     }
 

@@ -9,7 +9,7 @@ footer .footer-container {
 	margin: auto;
 }
 
-footer .top {
+footer .footer-top {
 	margin: 30px 40px;
 	display: flex;
 	justify-content: space-between;
@@ -29,28 +29,28 @@ footer .top {
 	}
 }
 
-footer .left div {
+footer .footer-left div {
 	animation: float 5s infinite;
 }
 
-footer .top .right {
+footer .footer-top .footer-right {
 	width: 50%;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 }
 
-footer .top .right>a {
+footer .footer-top .footer-right>a {
 	transition: 1s;
 	transition-property: transform, color;
 }
 
-footer .top .right>a:hover {
+footer .footer-top .footer-right>a:hover {
 	transform: scale(1.3);
 	color: cyan;
 }
 
-footer .top a {
+footer .footer-top a {
 	display: inline-block;
 	text-decoration: none;
 	font-size: 20px;
@@ -102,12 +102,12 @@ footer .bottom img:hover {
 		height: 25px;
 	}
 
-	footer .top {
+	footer .footer-top {
 		justify-content: center;
 		margin: 10px;
 	}
 
-	footer .top .right {
+	footer .footer-top .footer-right {
 		display: none;
 	}
 
