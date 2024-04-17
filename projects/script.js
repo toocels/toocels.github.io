@@ -43,6 +43,10 @@ var projects = [{
 	"text": "I developed a custom game from scratch called 'MARIO!'. Players can dynamically alter the game world while playing. Additionally, I created a game library utilizing SDL for window and image rendering.",
 	"img": "./banners/cstm-mario.png"
 }, {
+	"img": "./banners/arch.png",
+	"head": "Arch System",
+	"text": "While not technically a project, installing Arch Linux from scratch and configuring it to use as a daily driver was a valuable learning experience. It helped me gain proficiency with Linux and become more comfortable using it. Arch has been my preferred operating system since 2020. So yhea, i use archbtw."
+}, {
 	"head": "Discord Bot",
 	"text": "One of the most enjoyable bots I developed is for use with friends on Discord. Its text-to-voice mode provides endless entertainment. Its sole purpose was text-to-speech conversion, and it performed admirably.",
 	"img": "./banners/discord-bot.png"
@@ -64,10 +68,6 @@ var projects = [{
 	"text": "A project involving extensive backend work, the Daksh website boasts features such as transaction verification and admin editing capabilities. All data is dynamically loaded and stored in MongoDB, and the website is hosted using Next.js. It serves as a significant real-world application.",
 	"link": "https://daksh.sastra.edu/",
 	"img": "./banners/daksh.png"
-}, {
-	"img": "./banners/arch.png",
-	"head": "Arch System",
-	"text": "While not technically a project, installing Arch Linux from scratch and configuring it to use as a daily driver was a valuable learning experience. It helped me gain proficiency with Linux and become more comfortable using it. Arch has been my preferred operating system since 2020. So yhea, i use archbtw."
 }]
 
 
@@ -75,6 +75,7 @@ var elem = document.querySelector(".row")
 for (var i = 0; i < projects.length; i++) {
 	var clone = elem.cloneNode(true);
 	clone.style.display = "flex"
+	clone.id = i
 	clone.querySelector(".head").innerHTML = projects[i].head
 	clone.querySelector(".text").innerHTML = projects[i].text
 

@@ -95,7 +95,7 @@ a {
 	flex-grow: 1;
 
 	h3 {
-		font-size: 30px;
+		font-size: 35px;
 		color: blue;
 		margin-bottom: 0px;
 	}
@@ -106,6 +106,7 @@ a {
 
 	>div>div {
 		margin: 20px 0;
+		margin-top: 10px;
 	}
 
 	>div>div>div {
@@ -120,7 +121,12 @@ a {
 		color: rgba(0, 0, 0, 0.8);
 		margin-left: 10px;
 	}
+
+	>div>div img {
+		width: 400px;
+	}
 }
+
 
 @media print {
 	body {
