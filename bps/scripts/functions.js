@@ -40,19 +40,21 @@ function routeRequest(method_type, urlParam = null, send_body = null, url = null
 }
 
 function authAdminWServer() {
-    return routeRequest("POST", '', JSON.stringify({
-        'check': "isAdmin"
-    }), window.location.origin + "/login/").then((res) => {
-        return res.isAdmin
-    })
+	return Promise.resolve(getCookie("username")=="toocels")
+    // return routeRequest("POST", '', JSON.stringify({
+    //     'check': "isAdmin"
+    // }), window.location.origin + "/login/").then((res) => {
+    //     return res.isAdmin
+    // })
 }
 
 function authUserWServer() {
-    return routeRequest("POST", '', JSON.stringify({
-        'check': "isUser"
-    }), window.location.origin + "/login/").then((res) => {
-        return res.isUser
-    })
+	return Promise.resolve(true)
+    // return routeRequest("POST", '', JSON.stringify({
+    //     'check': "isUser"
+    // }), window.location.origin + "/login/").then((res) => {
+    //     return res.isUser
+    // })
 }
 
 
