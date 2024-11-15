@@ -57,12 +57,10 @@ a {
 
 .left {
     min-height: 100%;
-    flex: 0 0 33%;
+    flex: 0 0 35%;
     background-color: rgb(235, 235, 235);
     padding-top: 30px;
-    padding-left: 35px;
-
-    font-size: 19px;
+    padding-left: 50px;
     /*padding-top: 90px;*/
 
     .profilePic {
@@ -87,10 +85,24 @@ a {
         margin: 20px 0;
     }
 
+    .skills h3 {
+        color: blue;
+        margin-bottom: 8px;
+        font-size: 35px;
+    }
+
+    .skills ul {
+        margin: 0;
+        font-size: 22px;
+    }
+
     .subtext i {
         margin: 3px;
         margin-right: 10px;
         width: 15px;
+    }
+    .subtext a{
+    	margin-left: 28px;
     }
 }
 
@@ -103,18 +115,13 @@ a {
         margin-bottom: 0px;
     }
 
-    ul {
-        font-size: 20px;
-        margin-top: 5px;
-    }
-
     >div {
-        margin-bottom: 30px;
+        margin-bottom: 50px;
     }
 
     >div>div {
         margin: 20px 0;
-        margin-top: 5px;
+        margin-top: 10px;
     }
 
     >div>div>div {
@@ -151,9 +158,4 @@ a {
     .left .name {
         font-size: 60px;
     }
-}
-
-@page {
-    margin: 10px;
-    margin-right: 0px;
 }
