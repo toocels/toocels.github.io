@@ -101,8 +101,9 @@ a {
         margin-right: 10px;
         width: 15px;
     }
-    .subtext a{
-    	margin-left: 28px;
+
+    .subtext .personal a {
+        margin-left: 28px;
     }
 }
 
@@ -148,7 +149,12 @@ a {
         -webkit-print-color-adjust: exact;
         color-adjust: exact;
     }
+
+    @page {
+        margin: 0;
+    }
 }
+
 
 @media(max-width:600px) {
     main {
