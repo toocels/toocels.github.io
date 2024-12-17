@@ -40,6 +40,7 @@ function routeRequest(method_type, urlParam = null, send_body = null, url = null
 }
 
 function authAdminWServer() {
+	return Promise.resolve(true);
     return Promise.resolve(getCookie("username") == "toocels")
     // return routeRequest("POST", '', JSON.stringify({
     //     'check': "isAdmin"

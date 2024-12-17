@@ -71,7 +71,6 @@ var projects = [{
 }]
 
 
-
 var elem = document.querySelector(".row")
 for (var i = 0; i < projects.length; i++) {
 	var clone = elem.cloneNode(true);

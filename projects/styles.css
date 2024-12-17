@@ -1,3 +1,12 @@
+html {
+    cursor: url('/images/arrow1.png'), auto;
+}
+
+a:hover,
+button:hover {
+    cursor: url('/images/arrow2.png'), auto;
+}
+
 body {
 	background-image: url("./bg.jpg");
 	background-repeat: repeat-y;

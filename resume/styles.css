@@ -101,10 +101,6 @@ a {
         margin-right: 10px;
         width: 15px;
     }
-
-    .subtext .personal a {
-        margin-left: 28px;
-    }
 }
 
 .right {
@@ -145,16 +141,16 @@ a {
 
 
 @media print {
+    @page {
+        margin: 0; /* Removes default page margins */
+    }
     body {
+        margin: 0; /* Removes body margins */
+        padding: 0; /* Removes padding if any */
         -webkit-print-color-adjust: exact;
         color-adjust: exact;
     }
-
-    @page {
-        margin: 0;
-    }
 }
-
 
 @media(max-width:600px) {
     main {
