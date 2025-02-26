@@ -1,0 +1,51 @@
+.notfound {
+	background-color: black;
+	color: white;
+	background-image: url("/images/explosion-landscape.jpg");
+	background-position: center;
+	height: 100dvh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.notfound .text1 {
+	color: green;
+	font-weight: 700;
+	font-size: 400px;
+	line-height: 350px;
+	text-shadow: 10px 10px cyan;
+}
+
+.notfound .text2 {
+	font-size: 30px;
+	font-weight: 700;
+	text-align: center;
+}
+
+@media(max-width:768px) {
+	.notfound .text1 {
+		font-size: 280px;
+		line-height: 300px;
+	}
+
+	.notfound .text2 {
+		font-size: 20px;
+	}
+}
+
+@media(max-width:480px) {
+	.notfound .text1 {
+		font-size: 150px;
+		line-height: 200px;
+		text-shadow: 6px 6px cyan;
+	}
+
+	.notfound .text2 {
+		font-size: 15px;
+		text-shadow: 1px 1px black;
+	}
+}

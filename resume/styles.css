@@ -1,0 +1,163 @@
+main * {
+    user-select: auto;
+}
+
+main {
+    overflow: hidden;
+    display: flex;
+    background-color: white;
+    min-height: 100vh;
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+main>div {
+    margin: 10px;
+    padding: 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.top {
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+    margin-top: 80px;
+
+    h1 {
+        text-align: center;
+        color: white;
+        letter-spacing: 5px;
+        margin: 0;
+    }
+
+    .exportBut {
+        display: flex;
+        justify-content: right;
+    }
+
+    .exportPdf {
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        border: solid;
+        border-width: 3px;
+        border-color: white;
+    }
+}
+
+.left {
+    min-height: 100%;
+    flex: 0 0 35%;
+    background-color: rgb(235, 235, 235);
+    padding-top: 30px;
+    padding-left: 50px;
+    /*padding-top: 90px;*/
+
+    .profilePic {
+        /*width: 100%;*/
+        /*display: flex;*/
+    }
+
+    img {
+        width: 70%;
+    }
+
+    .name {
+        font-size: 70px;
+        color: blue;
+        line-height: 0.95;
+    }
+
+    .subName {
+        font-weight: bolder;
+        color: rgb(100, 100, 100);
+        font-size: 25px;
+        margin: 20px 0;
+    }
+
+    .skills h3 {
+        color: blue;
+        margin-bottom: 8px;
+        font-size: 35px;
+    }
+
+    .skills ul {
+        margin: 0;
+        font-size: 22px;
+    }
+
+    .subtext i {
+        margin: 3px;
+        margin-right: 10px;
+        width: 15px;
+    }
+}
+
+.right {
+    flex-grow: 1;
+
+    h3 {
+        font-size: 35px;
+        color: blue;
+        margin-bottom: 0px;
+    }
+
+    >div {
+        margin-bottom: 50px;
+    }
+
+    >div>div {
+        margin: 20px 0;
+        margin-top: 10px;
+    }
+
+    >div>div>div {
+        font-size: 20px;
+    }
+
+    >div>div>span {
+        color: rgba(0, 0, 0, 0.9);
+    }
+
+    >div>div>article {
+        color: rgba(0, 0, 0, 0.8);
+        margin-left: 10px;
+    }
+
+    >div>div img {
+        width: 400px;
+    }
+}
+
+
+@media print {
+    @page {
+        margin: 0; /* Removes default page margins */
+    }
+    body {
+        margin: 0; /* Removes body margins */
+        padding: 0; /* Removes padding if any */
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+}
+
+@media(max-width:600px) {
+    main {
+        flex-direction: column;
+    }
+
+    .left .name {
+        font-size: 60px;
+    }
+}

@@ -1,0 +1,12 @@
+body {
+    height: 100lvh;
+    overflow: hidden;
+    background-image: url('/images/restricted.jpg');
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px grey;
+    font-weight: bolder;
+    font-size: 25px;
+}

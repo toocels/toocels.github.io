@@ -1,0 +1,171 @@
+.landing {
+    overflow: hidden;
+    background-image: url("/images/explosion-landscape.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.landing {
+    display: flex;
+    align-items: center;
+}
+
+.landing .heading {
+    color: white;
+    font-size: 85px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 255, 255, 0.6);
+    transition: background-color 1s;
+}
+
+.landing .heading:hover {
+    background-color: rgba(255, 255, 0, 0.6);
+}
+
+.landing .arrow {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    color: rgb(0, 255, 255);
+    font-size: 80px;
+    text-decoration: none;
+    transition: color 1s;
+}
+
+.landing .arrow:hover {
+    color: rgb(255, 255, 0);
+}
+
+@media(max-width: 1170px) {
+    .landing {
+        /*background-size: auto 100%;*/
+    }
+}
+
+@media(max-width: 992px) {
+    .landing .heading {
+        font-size: 70px;
+    }
+}
+
+@media(max-width: 768px) {
+    .landing .heading {
+        font-size: 50px;
+    }
+}
+
+.whoami {
+    max-width: 1170px;
+    margin: auto;
+    background-color: #0d0d0d;
+    height: 500px;
+    display: flex;
+    color: white;
+    padding: 15px;
+}
+
+.whoami .left {
+    position: relative;
+    width: 60%;
+    padding: 50px;
+}
+
+.whoami .heading {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.whoami .text {
+    font-size: 20px;
+}
+
+.whoami .bottom {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 40px;
+}
+
+@keyframes change-bg {
+    0% {
+        background-color: #aacc44;
+    }
+
+    33% {
+        background-color: #44aacc;
+    }
+
+    66% {
+        background-color: #cc44aa;
+    }
+
+    100% {
+        background-color: #aacc44;
+    }
+}
+
+.whoami .right {
+    background-color: grey;
+    background-image: url("/images/look-left.png");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 40%;
+    animation-name: change-bg;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+.whoami>div {
+    transition: transform 1s;
+}
+
+.whoami>div:hover {
+    transform: scale(1.05);
+}
+
+@media(max-width:768px) {
+
+    .whoami .right,
+    .whoami .left {
+        width: 50%;
+    }
+
+    .whoami {
+        height: 400px;
+    }
+
+    .whoami .heading {
+        font-size: 30px;
+    }
+
+    .whoami .text {
+        font-size: 16px;
+    }
+}
+
+@media(max-width:480px) {
+    .whoami {
+        height: 200px;
+    }
+
+    .whoami .left {
+        padding: 15px;
+    }
+
+    .whoami .heading {
+        margin-bottom: 0;
+        font-size: 20px;
+    }
+
+    .whoami .text {
+        font-size: 14px;
+    }
+
+    .landing .arrow {
+        font-size: 40px;
+    }
+}

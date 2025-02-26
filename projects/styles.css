@@ -1,0 +1,154 @@
+html {
+    cursor: url('/images/arrow1.png'), auto;
+}
+
+a:hover,
+button:hover {
+    cursor: url('/images/arrow2.png'), auto;
+}
+
+body {
+	background-image: url("./bg.jpg");
+	background-repeat: repeat-y;
+	background-size: 100vw;
+	animation: slide 50s linear infinite;
+}
+
+@keyframes slide {
+	from {
+		background-position: 0 0;
+	}
+
+	to {
+		background-position: 0 -100%;
+	}
+}
+
+.projects {
+	max-width: 1170px;
+	margin: auto;
+	padding: 15px;
+	color: white;
+	margin-top: 70px;
+}
+
+.projects .heading {
+	font-size: 90px;
+	text-align: center;
+	font-weight: 700;
+	background-image: url("./fire.gif");
+	background-position: bottom;
+	margin-bottom: 20px;
+	transition-duration: 2s;
+	transition-property: color, background-color;
+}
+
+.projects .heading:hover {
+	background-image: url("./fire-fast.gif");
+	color: cyan;
+}
+
+.projects .row {
+	display: flex;
+	background-color: rgba(0, 0, 0, 0.7);
+	border: solid 5px cyan;
+	margin-bottom: 15px;
+	transition-duration: 0.5s;
+	transition-property: scale;
+	min-height: 300px;
+	max-height: 400px;
+	overflow: hidden;
+}
+
+.projects .row:hover {
+	scale: 1.05;
+}
+
+.projects .left,
+.projects .right {
+	width: 50%;
+}
+
+.projects .left {
+	padding: 20px;
+}
+
+.projects .left .head {
+	font-size: 40px;
+	margin-bottom: 15px;
+}
+
+.projects .left .text {
+	font-size: 25px;
+}
+
+.projects .left a {
+	color: blue;
+}
+
+.projects .right img {
+	width: 100%;
+	height: 100%;
+}
+
+
+@media(max-width:992px) {
+	.projects .heading {
+		font-size: 60px;
+	}
+
+	.projects .left .head {
+		font-size: 30px;
+	}
+
+	.projects .left .text {
+		font-size: 20px;
+	}
+}
+
+@media(max-width:768px) {
+	.projects .heading {
+		font-size: 50px;
+	}
+
+	.projects .left .head {
+		font-size: 25px;
+	}
+
+	.projects .left .text {
+		font-size: 16px;
+	}
+
+	.projects .row {
+		flex-direction: column-reverse;
+		max-height: 100vh;
+	}
+
+	.projects .row img {
+		max-height: 300px;
+		width: 100%;
+	}
+
+	.projects .left,
+	.projects .right {
+		width: 100%;
+	}
+
+	.projects .left {
+		padding: 10px;
+	}
+}
+
+@media(max-width:480px) {
+	.projects .heading {
+		font-size: 40px;
+	}
+
+	.projects .left .head {
+		font-size: 25px;
+	}
+
+	.projects .left .text {
+		font-size: 16px;
+	}
+}

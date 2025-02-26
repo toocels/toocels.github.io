@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'Cairo';
+    src: url('/fonts/Cairo.ttf') format('truetype');
+}
+
+/* NAV BAR START */
+nav {
+    transition-duration: 0.5s;
+    transition-property: transform opacity;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    color: white;
+    background-color: black;
+    z-index: 10;
+}
+
+nav .nav-container {
+    max-width: 1170px;
+    min-height: 70px;
+    margin: auto;
+    padding: 0px 15px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .nav-left,
+nav .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0px 10px;
+    font-family: Cairo;
+    font-size: 22px;
+    max-height: 50px;
+    transition: 0.5s;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+nav a:hover {
+    color: cyan;
+}
+
+nav img {
+    border-radius: 50%;
+    height: 50px;
+    transition: 0.5s;
+}
+
+nav img:hover {
+    border-radius: 10%;
+}
+
+.hamburger,
+.options {
+    display: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media(max-width:768px) {
+    nav .nav-right>a {
+        display: none;
+    }
+
+    nav .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 70px;
+        cursor: pointer;
+        transition: 0.7s;
+    }
+
+    nav .hamburger-active {
+        rotate: 270deg;
+    }
+
+    nav .bar {
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        margin: 4px 0px;
+        border-radius: 10px;
+        transition: 0.7s;
+    }
+
+    nav .hamburger:hover .bar {
+        background-color: cyan;
+    }
+
+    nav .options {
+        display: block;
+        position: absolute;
+        top: 70px;
+        right: -250px;
+        width: 200px;
+        height: 120dvh;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: 0.7s;
+    }
+
+    nav .options-active {
+        right: 0px;
+        background-color: rgba(0, 0, 0, 0.97);
+    }
+}
+
+
+main,
+footer {
+    transition: 0.7s;
+}
+
+
+/* NAV BAR END */
