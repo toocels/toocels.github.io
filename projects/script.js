@@ -64,6 +64,10 @@ var projects = [{
 	"link": "https://ecellsastra.org/",
 	"img": "./banners/ecell.png"
 }, {
+	"head": "Cuckoo & CAPEv2 Sandbox Deployment",
+	"text": "While it might seem simple to install two software systems, the deployment of Cuckoo and CAPEv2 was a complex task. The process involved navigating through numerous dependency errors, particularly as both systems rely heavily on Python. The setup required in-depth Linux knowledge, virtual machine configurations, and troubleshooting to ensure both sandboxes ran smoothly and provided reliable malware analysis capabilities. Overcoming these challenges significantly enhanced my technical proficiency in system deployment and management.",
+	"img": "./banners/cuckoo.png"
+}, {
 	"head": "Daksh Website",
 	"text": "A project involving extensive backend work, the Daksh website boasts features such as transaction verification and admin editing capabilities. All data is dynamically loaded and stored in MongoDB, and the website is hosted using Next.js. It serves as a significant real-world application.",
 	"link": "https://daksh.sastra.edu/",
