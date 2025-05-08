@@ -140,7 +140,6 @@ a {
     }
 }
 
-
 @media print {
     @page {
         margin: 10px; /* Removes default page margins */
@@ -154,6 +153,9 @@ a {
         padding: 0; /* Removes padding if any */
         -webkit-print-color-adjust: exact;
         color-adjust: exact;
+    }
+    .projects{
+        margin-top:270px;
     }
 }
 
