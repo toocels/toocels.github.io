@@ -143,7 +143,11 @@ a {
 
 @media print {
     @page {
-        margin: 0; /* Removes default page margins */
+        margin: 10px; /* Removes default page margins */
+    }
+    .left{
+        margin:0;
+        margin-right: 10px;
     }
     body {
         margin: 0; /* Removes body margins */
