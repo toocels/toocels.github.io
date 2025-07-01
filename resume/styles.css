@@ -146,15 +146,19 @@ a {
     @page {
         margin: 10px; /* Removes default page margins */
     }
-    .left{
-        margin:0;
-        margin-right: 10px;
-    }
     body {
         margin: 0; /* Removes body margins */
         padding: 0; /* Removes padding if any */
         -webkit-print-color-adjust: exact;
         color-adjust: exact;
+    }
+    .right {
+        flex-grow: 1;
+        padding: 0 20px; /* <-- add horizontal padding */
+    }
+    .left{
+        margin:0;
+        margin-right: 5px;
     }
     .projects{
         margin-top:270px;
