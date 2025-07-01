@@ -16,7 +16,7 @@ var projects = [{
 	"img": "./banners/online-multiplayer.png"
 }, {
 	"head": "Self-Balancing Robot",
-	"text": "A remarkable project where I created a 2-wheeled robot that can balance itself. Using an MPU6050 for measurement and an Arduino for processing, along with a PID control loop, it achieves self-balancing. All code was written from scratch, and the build quality is exceptional.",
+	"text": "A remarkable project where I created a 2-wheeled robot that can balance itself. Using an MPU6050 for measurement and an Arduino for processing, along with a PID control loop, it achieves self-balancing. All code was written from scratch, and the build quality is trash.",
 	"img": "./banners/self-balancing-robot-2.jpg"
 }, {
 	"head": "Games",
@@ -28,7 +28,7 @@ var projects = [{
 	"img": "./banners/school-election-website.jpg"
 }, {
 	"head": "Twitter Bot",
-	"text": "One of the bots I created was inspired by Elon Musk. Although initially promising, I decided to discontinue its development before it reached its full potential.",
+	"text": "One of the social media bot i created. It has a pretty lame purpose to announce some info like where my miencraft server was hosted at.",
 	"img": "./banners/twitter-bot.png"
 }, {
 	"head": "Among Us Bot",
@@ -40,7 +40,7 @@ var projects = [{
 	"img": "./banners/archers.png"
 }, {
 	"head": "MARIO!",
-	"text": "I developed a custom game from scratch called 'MARIO!'. Players can dynamically alter the game world while playing. Additionally, I created a game library utilizing SDL for window and image rendering.",
+	"text": "I developed the infamous 'mario' game from scratch. Thw world generation is a little different tho, but similar physics, players can dynamically alter the game world while playing. Additionally, I created a game library utilizing SDL for window and image rendering.",
 	"img": "./banners/cstm-mario.png"
 }, {
 	"img": "./banners/arch.png",
@@ -72,8 +72,12 @@ var projects = [{
 	"text": "A project involving extensive backend work, the Daksh website boasts features such as transaction verification and admin editing capabilities. All data is dynamically loaded and stored in MongoDB, and the website is hosted using Next.js. It serves as a significant real-world application.",
 	"link": "https://daksh.sastra.edu/",
 	"img": "./banners/daksh.png"
+}, {
+	"head": "Opencti Threat intelligence platform",
+	"text": "During my internship at Infopercept, I worked extensively with threat intelligence platforms such as OpenCTI and MISP. My responsibilities included developing custom connectors, enhancing platform features using AI, fixing bugs, and deploying custom Docker images to restore or replicate missing functionality. This was my first hands-on experience contributing to active open-source projects, and it provided me with valuable insights into collaborative development, real-world threat intelligence workflows, and large-scale system integration.",
+	"link": "https://demo.opencti.io/dashboard",
+	"img": "./banners/opencti.png"
 }]
-
 
 var elem = document.querySelector(".row")
 for (var i = 0; i < projects.length; i++) {
