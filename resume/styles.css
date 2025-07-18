@@ -12,7 +12,7 @@ main {
     margin: auto;
 }
 
-main>div {
+main > div {
     margin: 10px;
     padding: 10px;
 }
@@ -52,7 +52,6 @@ a {
         border-width: 3px;
         border-color: white;
     }
-
 }
 
 .left {
@@ -65,7 +64,6 @@ a {
 
     /*padding-top: 90px;*/
     .profilePic {
-
         /*width: 100%;*/
 
         /*display: flex;*/
@@ -115,16 +113,14 @@ a {
             font-size: 35px;
         }
 
-        >div {
+        > div {
             margin-bottom: 20px;
         }
 
         a {
             font-size: 20px;
         }
-
     }
-
 }
 
 .right {
@@ -160,37 +156,37 @@ a {
         .sub-text {
             color: rgba(0, 0, 0, 0.9);
             font-size: 18px;
+            /* display: inline; */
+            text-align: justify;
         }
-
     }
 
-    >div {
+    > div {
         margin-bottom: 30px;
     }
 
-    >div>div {
+    > div > div {
         margin: 20px 0;
         margin-top: 20px;
     }
 
-    >div>div>div {
+    > div > div > div {
         font-size: 20px;
     }
 
-    >div>div>article {
+    > div > div > article {
         color: rgba(0, 0, 0, 0.8);
         margin-left: 10px;
     }
 
-    >div>div img {
+    > div > div img {
         width: 400px;
     }
-
 }
 
 @media print {
     @page {
-        margin: 10px; /* Removes default page margins */
+        margin: 10px;
     }
 
     body {
@@ -203,6 +199,7 @@ a {
     .right {
         flex-grow: 1;
         padding: 0 20px; /* <-- add horizontal padding */
+        margin-right: 30px;
     }
 
     .left {
@@ -211,13 +208,11 @@ a {
     }
 
     .projects {
-
         /*margin-top: 270px;*/
     }
-
 }
 
-@media(max-width:600px) {
+@media (max-width: 600px) {
     main {
         flex-direction: column;
     }
@@ -225,5 +220,4 @@ a {
     .left .name {
         font-size: 60px;
     }
-
 }
