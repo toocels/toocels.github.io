@@ -125,6 +125,7 @@ a {
 
 .right {
     flex-grow: 1;
+    margin-right: 20px;
 
     ul {
         margin: 0;
@@ -199,7 +200,6 @@ a {
     .right {
         flex-grow: 1;
         padding: 0 20px; /* <-- add horizontal padding */
-        margin-right: 30px;
     }
 
     .left {
