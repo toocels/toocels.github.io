@@ -144,6 +144,9 @@ a {
     }
 
     .sub-box {
+        page-break-inside: avoid;
+        break-inside: avoid;
+
         margin-bottom: 20px;
         margin-top: 10px;
 
