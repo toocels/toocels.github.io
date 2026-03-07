@@ -1,245 +1,251 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <title>Toocels</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/x-icon" href="/images/awesome-circle.png" />
+        <link rel="stylesheet" type="text/css" href="/bps/body.css" />
+        <link rel="stylesheet" type="text/css" href="/bps/navbar/navbar.css" />
+        <link rel="stylesheet" type="text/css" href="/bps/footer/footer.css" />
+        <link rel="stylesheet" type="text/css" href="./styles.css" />
+    </head>
 
-<head>
-    <title>Toocels</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="/images/awesome-circle.png">
-    <link rel="stylesheet" type="text/css" href="/bps/body.css">
-    <link rel="stylesheet" type="text/css" href="/bps/navbar/navbar.css">
-    <link rel="stylesheet" type="text/css" href="/bps/footer/footer.css">
-    <link rel="stylesheet" type="text/css" href="./styles.css">
-</head>
-
-<body>
-    <div id="navbar" w3-include-html="/bps/navbar/navbar.html"></div>
-    <div class="top">
-        <div></div>
-        <h1>Resume</h1>
-        <button onclick="window.print();" class="exportPdf">Export as PDF</button>
-    </div>
-    <main>
-        <div class="left">
-            <!--            <div class="profilePic">
-                <img src="./profile-pic.jpg">
-            </div> -->
-            <div class="name">S&nbspPranav<br>Kumar</div>
-            <div class="subName">
-                Student at SASTRA <br>
-                Final year, Batch '26
-            </div>
-            Tech enthusiast focused on software engineering and systems programming<br>
-            <div class="skills">
-                <h3>Key skills</h3>
-                <ul>
-                    <li>Python</li>
-                    <li>C++</li>
-                    <li>Full-stack Development (Node.js, Express, React)</li>
-                    <li>REST API Design & Integration</li>
-                    <li>MySQL & MongoDB</li>
-                    <li>Docker</li>
-                    <li>Linux/ Bash</li>
-                    <li>Git & CI/CD Pipelines</li>
-                    <li>Problem Solving (DSA)</li>
-                    <li>Security & Risk Analysis (MISP, OpenCTI)</li>`
-                </ul>
-            </div>
-
-            <div class="certifcations">
-                <h3>Certifications</h3>
-                <div>
-                    <div>C++ programming scratch to advanced</div>
-                    <div>Udemy | March 2023</div>
-                </div>
-                <div>
-                    <div>Learn advanced modern C++</div>
-                    <div>Udemy | October 2023</div>
-                </div>
-                <div>
-                    <div>Google Cybersecurity Professional Certificate</div>
-                    <div>Coursera | July 2024</div>
-                </div>
-                <div>
-                    <div>Intro to Internet of Things</div>
-                    <div>NPTEL | Jan 2025</div>
-                </div>
-                <div>
-                    <div>Intro to Industry 4.0 & IIoT</div>
-                    <div>Coursera | July 2024</div>
-                </div>
-            </div>
-            <div class="skills">
-                <h3>Languages Known</h3>
-                <ul>
-                    <li>English – Fluent</li>
-                    <li>Tamil – Fluent</li>
-                    <li>Hindi – Basic proficiency</li>
-                </ul>
-            </div>
-            <div class="subtext certifcations">
-                <h3>Contact me</h3>
-                <i class="fa-solid fa-phone"></i>+91 **********<br>
-                <i class="fa-regular fa-envelope"></i><a>pranavkumartc@gmail.com</a><br>
-                <i style="margin-left:4px; margin-right: 7px;" class="fa-brands fa-linkedin"></i><a target="_blank"
-                    href="https://linkedin.com/in/pranavkumar-s/">
-                    linkedin.com/in/pranavkumar-s</a><br>
-                <i style="margin-left:4px; margin-right: 7px;" class="fa-brands fa-github"></i><a target="_blank"
-                    href="https://github.com/toocels">
-                    github.com/toocels</a><br>
-                <i class="fa-brands fa-internet-explorer"></i>Website: <a href="https://toocels.github.io/">
-                    toocels.github.io</a><br>
-                <i style="margin-left:5px;margin-right: 8px;" class="fa-solid fa-location-dot"></i><b>Chennai</b>, Tamil
-                Nadu, India<br>
-            </div>
+    <body>
+        <div id="navbar" w3-include-html="/bps/navbar/navbar.html"></div>
+        <div class="top">
+            <div></div>
+            <h1>Resume</h1>
+            <button onclick="window.print()" class="exportPdf">Export as PDF</button>
         </div>
-        <div class="right">
-            <div>
-                <h3>Summary</h3>
-                <div>
+        <main>
+            <section class="resume-header">
+                <h1>S Pranav Kumar</h1>
+                <div class="contact-info">
+                    <span><i class="fa-solid fa-envelope"></i> pranavkumartc@gmail.com</span>
+                    <span><i class="fa-solid fa-phone"></i> +91 **********</span>
+                    <span><i class="fa-solid fa-location-dot"></i> Chennai, Tamil Nadu, India</span>
+                    <span><i class="fa-solid fa-globe"></i> Website: toocels.github.io</span>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/toocels" target="_blank"><i class="fa-brands fa-github"></i> Github: toocels</a>
+                    <a href="https://linkedin.com/in/pranavkumar-s" target="_blank"><i class="fa-brands fa-linkedin"></i> Linkedin: /pranavkumar-s</a>
+                </div>
+            </section>
+        
+            <section class="summary">
+                <h2>Summary</h2>
+                <p>Computer Science student experienced in backend development and building practical software systems. Enjoy solving real-world problems through automation, scalable applications, and full-stack tools. Interested in backend and systems engineering roles.</p>
+            </section>
+        
+            <section class="experience">
+                <h2>Professional experience</h2>
+                
+                <div class="job">
+                    <div class="date">2025 – Present</div>
                     <div>
-                      Final-year Computer Science student at SASTRA with a strong foundation in system/software development, data security, and IT processes. Experienced in building scalable full-stack applications, integrating APIs, and containerized workflows. Skilled in troubleshooting, documentation, and collaborating with cross-functional teams. Looking to apply technical, analytical, and communication skills in impactful software and technology roles.
+                        <h3>Infopercept Consulting Pvt Ltd</h3>
+                        <p>Building an AI-assisted penetration testing platform that validates vulnerabilities on target systems, with a multi-tenant scalable web architecture.</p>
                     </div>
                 </div>
-            </div>
-            <div>
-                <h3>Education</h3>
-                <div class="sub-box">
-                    <div class="sub-heads">
-                        <div>Bachelor of Technology - BTech in Computer Science</div>
-                        <div class="sub-text">2022-Present</div>
-                    </div>
-                    <div class="sub-text">SASTRA University, Thanjavur</div>
-                    <div class="sub-text">CGPA: 7.83</div>
-                </div>
-                <div class="sub-box">
-                    <div class="sub-heads">
-                        <div>Higher Secondary School (CBSE)</div>
-                        <div class="sub-text">2020 - 2022</div>
-                    </div>
-                    <div class="sub-text">The PSBB Millennium School</div>
-                    <div class="sub-text">Score: 93.6%</div>
-                </div>
-                <div class="sub-box">
-                    <div class="sub-heads">
-                        <div>High School (CBSE)</div>
-                        <div class="sub-text">2016 - 2020</div>
-                    </div>
-                    <div class="sub-text">The PSBB Millennium School</div>
-                    <div class="sub-text">Score: 91.2%</div>
-                </div>
-            </div>
-            <div>
-                <h3>Professional experience</h3>
-                <div class="sub-box">
-                    <div class="sub-heads">
-                        <div>Intern - Infopercept</div>
-                        <div class="sub-text">Jun 2025 - Present</div>
-                    </div>
-                    <div class="sub-text">
-                        Developed Python-based connectors for OpenCTI and MISP threat platforms. Added AI-driven enrichment for security datasets. Containerized workflows using Docker for scalability. Created & maintained technical documentation. Collaborated with team to debug, test, and deliver secure solutions aligned with client requirements.
+        
+                <div class="job">
+                    <div class="date">2025</div>
+                    <div>
+                        <h3>Infopercept Consulting Pvt Ltd</h3>
+                        <p>Developed Python-based connectors for OpenCTI and MISP threat platforms. Added AI-driven enrichment for security datasets. Containerized workflows using Docker for scalability. Created & maintained technical documentation. Collaborated with team to debug, test, and deliver secure solutions aligned with client requirements.</p>
                     </div>
                 </div>
-                <div class="sub-box">
-                    <div class="sub-heads">
-                        <div>Freelance Developer - Fiverr</div>
-                        <div class="sub-text">2022 - 2024</div>
-                    </div>
-                    <div class="sub-text">Built automation tools and browser extensions for global clients. Focused on reusable, maintainable code and meeting business needs. Delivered projects with clear documentation and client communication.</div>
-                </div>
-                <div>
-                    <h3 class="projects">Projects</h3>
-                    <div class="sub-box">
-                        <div class="sub-heads">
-                            <div>Malware Sandbox Infra (CAPE & Cuckoo)</div>
-                            <div class="sub-text">2025</div>
-                        </div>
-                        <div class="sub-text">
-                            Automated malware analysis using CAPE/Cuckoo, Python scripting, and Linux networking. Generated reports for 6,000+ binaries.
-                        </div>
-                    </div>
-                    <div class="sub-box">
-                        <div class="sub-heads">
-                            <div>Static Malware Detection using ML</div>
-                            <div class="sub-text">2025</div>
-                        </div>
-                        <div class="sub-text">
-                            Machine learning pipeline for malware classification (95%+ accuracy). Improved detection by integrating sandbox metadata.
-                        </div>
-                    </div>
-                    <div class="sub-box">
-                        <div class="sub-heads">
-                            <div>Daksh Fest Platform</div>
-                            <div class="sub-text">2023 & 2024</div>
-                        </div>
-                        <div class="sub-text">Event management platform with secure payments, dashboards, and admin tools. Processed 1,000+ transactions.</div>
-                    </div>
-                    <div class="sub-box">
-                        <div class="sub-heads">
-                            <div>Real-Time Gesture Interface</div>
-                            <div class="sub-text">2022</div>
-                        </div>
-                        <div class="sub-text">
-                            OpenCV + ML project achieving 98% accuracy in webcam-based gesture recognition.
-                        </div>
-                    </div>
-                    <div class="sub-box">
-                        <div class="sub-heads">
-                            <div>Attendance Chrome Extension</div>
-                            <div class="sub-text">2022</div>
-                        </div>
-                        <div class="sub-text">Automated Meet/Teams attendance, saving 7+ hrs/week for users.</div>
-                    </div>
-                    <div class="sub-box">
-                        <div class="sub-heads">
-                            <div>School Election Site</div>
-                            <div class="sub-text">2021</div>
-                        </div>
-                        <div class="sub-text">Full-stack voting application with authentication system.</div>
-                    </div>
-                    <div class="sub-box">
-                        <div class="sub-heads">
-                            <div>Self-Balancing Robot</div>
-                            <div class="sub-text">2021</div>
-                        </div>
-                        <div class="sub-text">Arduino + PID controlled robot demonstrating control system concepts.</div>
+        
+                <div class="job">
+                    <div class="date">2022 – 2024</div>
+                    <div>
+                        <h3>Freelance Developer - Fiverr</h3>
+                        <p>Built automation tools and browser extensions for global clients. Focused on reusable, maintainable code and meeting business needs. Delivered projects with clear documentation and client communication.</p>
                     </div>
                 </div>
-                <div>
-                    <h3>Co-curricular activities</h3>
-                    <div class="sub-box">
-                        <div class="sub-heads">
-                            <div>Developer - Daksh Web Team</div>
-                            <div class="sub-text">2023 - Present</div>
-                        </div>
-                        <div class="sub-text">Maintained official event platform, optimized workflows, integrated payment systems, and collaborated with multi-disciplinary teams.</div>
-                    </div>
-                    <div class="sub-box">
-                        <div class="sub-heads">
-                            <div>Developer - E-Cell</div>
-                            <div class="sub-text">2022 - 2023</div>
-                        </div>
-                        <div class="sub-text">Built newsletter automation, coordinated with designers, and delivered digital solutions for events.</div>
-                    </div>
-                    <div class="sub-box">
-                        <div class="sub-heads">
-                            <div>Participant - Hackers Hunt CTF</div>
-                            <div class="sub-text">2024</div>
-                        </div>
-                        <div class="sub-text">
-                            Ranked 7th in cybersecurity CTF solving cryptography, forensics, and reverse engineering challenges under time constraints.
-                        </div>
+            </section>
+        
+            <section class="projects">
+                <h2>Projects</h2>
+                
+                <div class="project">
+                    <div class="date">2025</div>
+                    <div>
+                        <h3>Malware Sandbox Infra (CAPE & Cuckoo)</h3>
+                        <p>Automated malware analysis infrastructure using CAPE, Cuckoo, Python, and Linux networking, generating reports for 6,000+ binaries.</p>
                     </div>
                 </div>
-            </div>
-    </main>
-    <div id="footer" w3-include-html="/bps/footer/footer.html"></div>
-    <script src="https://kit.fontawesome.com/eb92b1aa27.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="/bps/scripts/functions.js"></script>
-    <script type="text/javascript" src="/bps/scripts/include-html.js"></script>
-    <script type="text/javascript" src="/bps/navbar/navbar.js"></script>
-    <script type="text/javascript" src="./script.js"></script>
-</body>
+        
+                <div class="project">
+                    <div class="date">2025</div>
+                    <div>
+                        <h3>Analysis of Crypto-Ransomware Using ML-Based Multi-Level Profiling</h3>
+                        <p>Machine learning pipeline for malware classification (95% accuracy). Improved detection by integrating sandbox metadata.</p>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="date">2023 – 2024</div>
+                    <div>
+                        <h3>Daksh Fest Platform</h3>
+                        <p>Full-stack event management platform (Node.js, MySQL, payment APIs) handling 1,000+ transactions.</p>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="date">2022</div>
+                    <div>
+                        <h3>Real-Time Gesture Interface</h3>
+                        <p>OpenCV + ML project achieving accurate recognition of gestures webcam-based.</p>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="date">2022</div>
+                    <div>
+                        <h3>Attendance Chrome Extension</h3>
+                        <p>Automated Meet/Teams attendance, saving 7+ hrs/week for users.</p>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="education">
+                <h2>Education</h2>
+                
+                <div class="education-item">
+                    <div class="date">2022 – Present</div>
+                    <div>
+                        <h3>BTech in Computer Science (Honours), <em>SASTRA University, Thanjavur</em></h3>
+                        <p>CGPA: 7.89</p>
+                    </div>
+                </div>
+        
+                <div class="education-item">
+                    <div class="date">2020 – 2022</div>
+                    <div>
+                        <h3>Higher Secondary School (CBSE), <em>The PSBB Millennium School</em></h3>
+                        <p>Score: 93.6%</p>
+                    </div>
+                </div>
+        
+                <div class="education-item">
+                    <div class="date">2016 – 2020</div>
+                    <div>
+                        <h3>High School (CBSE), <em>The PSBB Millennium School</em></h3>
+                        <p>Score: 91.2%</p>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="skills">
+                <h2>Technical Skills</h2>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Tools</h3>
+                        <ul>
+                            <li>Linux</li>
+                            <li>Docker</li>
+                            <li>Git</li>
+                        </ul>
+                    </div>
+        
+                    <div class="skill-category">
+                        <h3>Databases</h3>
+                        <ul>
+                            <li>MySQL</li>
+                            <li>MongoDB</li>
+                            <li>Postgres</li>
+                        </ul>
+                    </div>
+        
+                    <div class="skill-category">
+                        <h3>Full-stack Development</h3>
+                        <ul>
+                            <li>Nodejs</li>
+                            <li>Nextjs</li>
+                            <li>React</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="skill-category" style="margin-top: 15px;">
+                    <h3>Languages</h3>
+                    <p>Python, JS, C++</p>
+                </div>
+            </section>
+        
+            <section class="activities">
+                <h2>Co-curricular activities</h2>
+                
+                <div class="activity">
+                    <h3>Hackers Hunt CTF</h3>
+                    <p>Ranked 7th in cybersecurity CTF solving cryptography, forensics, and reverse engineering challenges under time constraints.</p>
+                </div>
+        
+                <div class="activity">
+                    <h3>Daksh</h3>
+                    <p>Maintained official event platform, optimized workflows, integrated payment systems, and collaborated with multi-disciplinary teams.</p>
+                </div>
+        
+                <div class="activity">
+                    <h3>E-Cell</h3>
+                    <p>Built newsletter automation, coordinated with designers, and delivered digital solutions for events.</p>
+                </div>
+            </section>
+        
+            <section class="certifications">
+                <h2>Certifications</h2>
+                
+                <div class="cert-grid">
+                    <div class="cert">
+                        <h3>Cloud computing</h3>
+                        <p>NPTEL | July 2025</p>
+                    </div>
+        
+                    <div class="cert">
+                        <h3>Introduction to Industry 4.0 and IIoT</h3>
+                        <p>NPTEL July 2024</p>
+                    </div>
+        
+                    <div class="cert">
+                        <h3>Advanced Modern C++</h3>
+                        <p>Udemy | October 2023</p>
+                    </div>
+        
+                    <div class="cert">
+                        <h3>Google Cybersecurity Professional Certificate</h3>
+                        <p>Coursera | July 2024</p>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="languages">
+                <h2>Languages</h2>
+                <div class="language-grid">
+                    <div class="language-item">
+                        <strong>English</strong>
+                        Fluent
+                    </div>
+                    <div class="language-item">
+                        <strong>Tamil</strong>
+                        Fluent
+                    </div>
+                    <div class="language-item">
+                        <strong>Hindi</strong>
+                        Basic proficiency
+                    </div>
+                </div>
+            </section>
+        </main>
 
+        <div id="footer" w3-include-html="/bps/footer/footer.html"></div>
+        <script src="https://kit.fontawesome.com/eb92b1aa27.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="/bps/scripts/functions.js"></script>
+        <script type="text/javascript" src="/bps/scripts/include-html.js"></script>
+        <script type="text/javascript" src="/bps/navbar/navbar.js"></script>
+        <script type="text/javascript" src="./script.js"></script>
+    </body>
 </html>
