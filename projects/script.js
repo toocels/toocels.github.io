@@ -92,6 +92,11 @@ var projects = [
     img: "./banners/daksh.png",
   },
   {
+    head: "Agentic Pentest AI",
+    text: "Developed autonomous penetration testing agents using LangGraph and AG2 (Python), capable of solving CTF-style lab scenarios with minimal human intervention. Implemented workflows for CVE-based exploit generation and execution, and integration with tools like Metasploit and MCP frameworks, demonstrating applied security automation and agent-based system design.",
+    img: "./banners/pentest.png",
+  },
+  {
     head: "Opencti Threat intelligence platform",
     text: "During my internship at Infopercept, I worked extensively with threat intelligence platforms such as OpenCTI and MISP. My responsibilities included developing custom connectors, enhancing platform features using AI, fixing bugs, and deploying custom Docker images to restore or replicate missing functionality. This was my first hands-on experience contributing to active open-source projects, and it provided me with valuable insights into collaborative development, real-world threat intelligence workflows, and large-scale system integration.",
     link: "https://demo.opencti.io/dashboard",

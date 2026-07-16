@@ -64,6 +64,11 @@ main {
     font-size: 0.9rem;
 }
 
+.contact-info a {
+    color: #000000;
+    text-decoration: none;
+}
+
 .social-links a {
     color: #000000;
     text-decoration: none;
@@ -274,7 +279,7 @@ section h3 {
         max-width: 100% !important;
         width: 1200px !important; /* Matches your script */
         margin: 0 !important;
-        padding: 25px 25px 15px 25px !important; /* Reduced padding for more space */
+        padding: 10px 25px 15px 25px !important; /* Reduced padding for more space */
         box-shadow: none !important;
         border-radius: 0 !important;
         page-break-after: auto;
@@ -292,7 +297,7 @@ section h3 {
 
     /* Maintain header styling */
     .resume-header {
-        margin-bottom: 20px !important; /* Reduced from 30px */
+        margin-bottom: 1px !important; /* Reduced from 30px */
     }
 
     .resume-header h1 {
@@ -372,7 +377,6 @@ section h3 {
 
     /* Compact sections */
     section {
-        page-break-inside: avoid;
         margin-bottom: 16px !important; /* Reduced from 20px */
     }
 
@@ -408,9 +412,7 @@ section h3 {
         font-size: 0.85rem !important;
     }
 
-    /* Force page break before Education so Page 1 has everything up to Projects */
     .education {
-        page-break-before: always !important;
         padding-top: 0 !important;
         margin-top: 0 !important;
     }

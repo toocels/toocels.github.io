@@ -9,6 +9,11 @@
     <link rel="stylesheet" type="text/css" href="/bps/navbar/navbar.css">
     <link rel="stylesheet" type="text/css" href="/bps/footer/footer.css">
     <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#6366f1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/images/pwa-icon-192.png">
 </head>
 
 <body>
@@ -39,6 +44,15 @@
     <script type="text/javascript" src="/bps/scripts/functions.js"></script>
     <script type="text/javascript" src="/bps/scripts/include-html.js"></script>
     <script type="text/javascript" src="/bps/navbar/navbar.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(reg => console.log('Service Worker registered!'))
+                    .catch(err => console.error('Service Worker registration failed:', err));
+            });
+        }
+    </script>
 </body>
 
 </html>
