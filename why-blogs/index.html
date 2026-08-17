@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Why Blogs - Toocels</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/images/awesome-circle.png">
+    <link rel="stylesheet" type="text/css" href="/bps/body.css">
+    <link rel="stylesheet" type="text/css" href="/bps/navbar/navbar.css">
+    <link rel="stylesheet" type="text/css" href="/bps/footer/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent-color: #6366f1;
+            --accent-glow: rgba(99, 102, 241, 0.15);
+            --bg-card: #141414;
+            --bg-card-hover: #1e1e1e;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1170px;
+            min-height: 80vh;
+            width: 100%;
+            margin: 0 auto;
+            padding: 120px 24px 60px 24px;
+            box-sizing: border-box;
+        }
+
+        .header-section {
+            margin-bottom: 48px;
+            text-align: center;
+        }
+
+        .header-section h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin: 0 0 12px 0;
+            background: linear-gradient(135deg, #a5b4fc 0%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.025em;
+        }
+
+        .header-section p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin: 0;
+            font-weight: 300;
+        }
+
+        .blog-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .blog-card {
+            background-color: var(--bg-card);
+            border: 1px solid #262626;
+            border-radius: 16px;
+            padding: 24px;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .blog-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: var(--accent-color);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-2px);
+            background-color: var(--bg-card-hover);
+            border-color: #3f3f46;
+            box-shadow: 0 10px 20px -10px var(--accent-glow), 0 0 0 1px var(--accent-color);
+        }
+
+        .blog-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .blog-card-content {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .blog-title {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            transition: color 0.2s ease;
+        }
+
+        .blog-card:hover .blog-title {
+            color: #a5b4fc;
+        }
+
+        .blog-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            line-height: 1.5;
+            margin-top: 2px;
+        }
+
+        .blog-meta {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 4px;
+        }
+
+        .blog-arrow {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            transition: all 0.3s ease;
+            transform: translateX(0);
+        }
+
+        .blog-card:hover .blog-arrow {
+            color: var(--accent-color);
+            transform: translateX(4px);
+        }
+
+        .loading-state,
+        .error-state,
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            background-color: var(--bg-card);
+            border: 1px dashed #3f3f46;
+            border-radius: 16px;
+        }
+
+        .spinner {
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border-left-color: var(--accent-color);
+            animation: spin 1s linear infinite;
+            margin: 0 auto 16px auto;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            margin-top: 40px;
+        }
+
+        .pagination-btn {
+            background-color: var(--bg-card);
+            border: 1px solid #262626;
+            color: var(--text-primary);
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .pagination-btn:hover:not(:disabled) {
+            background-color: var(--bg-card-hover);
+            border-color: var(--accent-color);
+            box-shadow: 0 0 10px var(--accent-glow);
+        }
+
+        .pagination-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .page-info {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div w3-include-html="/bps/navbar/navbar.html"></div>
+
+    <main>
+        <div class="header-section">
+            <h1>Why Blogs</h1>
+            <p>Thoughtful ideas, perspectives, and documentations</p>
+        </div>
+
+        <div id="blog-list-container" class="blog-list">
+            <div class="loading-state">
+                <div class="spinner"></div>
+                Loading blogs...
+            </div>
+        </div>
+    </main>
+
+    <div id="footer" w3-include-html="/bps/footer/footer.html"></div>
+
+    <script type="text/javascript" src="/bps/scripts/functions.js"></script>
+    <script type="text/javascript" src="/bps/scripts/include-html.js"></script>
+    <script type="text/javascript" src="/bps/navbar/navbar.js"></script>
+    <script>
+        let allBlogs = [];
+        let currentPage = 1;
+        const blogsPerPage = 10;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchBlogs();
+        });
+
+        function parseBlogFilename(filename) {
+            // Regex to match ISO timestamp at the end: -YYYY-MM-DDTHH[-]mm[-]ss[Z].md
+            const timestampRegex = /-(\d{4}-\d{2}-\d{2}T\d{2}[-:]\d{2}[-:]\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:?\d{2})?)\.md$/i;
+            const tsMatch = filename.match(timestampRegex);
+            
+            let heading = filename.replace(/\.md$/i, '');
+            let description = '';
+            let dateObj = new Date(0); // Epoch fallback
+
+            if (tsMatch) {
+                const timestampStr = tsMatch[1];
+                const rest = filename.slice(0, tsMatch.index);
+                
+                const firstHyphen = rest.indexOf('-');
+                if (firstHyphen !== -1) {
+                    heading = rest.slice(0, firstHyphen);
+                    description = rest.slice(firstHyphen + 1);
+                } else {
+                    heading = rest;
+                }
+
+                // Normalise timestamp format: convert hyphens in the time segment to colons
+                let dateStr = timestampStr;
+                const tIndex = dateStr.indexOf('T');
+                if (tIndex !== -1) {
+                    const datePart = dateStr.slice(0, tIndex);
+                    let timePart = dateStr.slice(tIndex + 1);
+                    timePart = timePart.replace(/-/g, ':');
+                    dateStr = datePart + 'T' + timePart;
+                }
+                
+                const parsedDate = new Date(dateStr);
+                if (!isNaN(parsedDate.getTime())) {
+                    dateObj = parsedDate;
+                }
+            }
+
+            // Format heading nicely: capitalize and remove separator hyphens
+            heading = heading.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+            
+            // Format description nicely if it exists
+            if (description) {
+                description = description.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+            }
+
+            return {
+                filename,
+                heading,
+                description,
+                timestamp: dateObj
+            };
+        }
+
+        function fetchBlogs() {
+            const container = document.getElementById('blog-list-container');
+
+            fetch('/api/why-blogs/')
+                .then(res => {
+                    if (!res.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return res.json();
+                })
+                .then(data => {
+                    if (!data.files || data.files.length === 0) {
+                        renderEmptyState();
+                        return;
+                    }
+
+                    // Parse and map all blogs
+                    allBlogs = data.files.map(file => parseBlogFilename(file));
+                    
+                    // Sort descending (latest first)
+                    allBlogs.sort((a, b) => b.timestamp - a.timestamp);
+
+                    currentPage = 1;
+                    renderBlogs();
+                })
+                .catch(err => {
+                    console.error('Error fetching blogs:', err);
+                    renderErrorState();
+                });
+        }
+
+        function renderBlogs() {
+            const container = document.getElementById('blog-list-container');
+            const totalBlogs = allBlogs.length;
+            const totalPages = Math.ceil(totalBlogs / blogsPerPage);
+
+            // Paginate
+            const startIndex = (currentPage - 1) * blogsPerPage;
+            const endIndex = Math.min(startIndex + blogsPerPage, totalBlogs);
+            const paginatedBlogs = allBlogs.slice(startIndex, endIndex);
+
+            container.innerHTML = '';
+
+            paginatedBlogs.forEach(blog => {
+                let metaHtml = '';
+                if (blog.timestamp.getTime() > 0) {
+                    const formattedDate = blog.timestamp.toLocaleDateString('en-US', {
+                        day: 'numeric',
+                        month: 'short',
+                        year: 'numeric'
+                    });
+                    metaHtml = `<span>${formattedDate}</span>`;
+                }
+
+                let descHtml = '';
+                if (blog.description) {
+                    descHtml = `<div class="blog-desc">${blog.description}</div>`;
+                }
+
+                const card = document.createElement('a');
+                card.className = 'blog-card';
+                card.href = `/why-blogs/view/?blog=${encodeURIComponent(blog.filename)}`;
+                card.innerHTML = `
+                    <div class="blog-card-content">
+                        <div class="blog-title">${blog.heading}</div>
+                        ${descHtml}
+                        <div class="blog-meta">
+                            ${metaHtml}
+                        </div>
+                    </div>
+                    <div class="blog-arrow">&rarr;</div>
+                `;
+                container.appendChild(card);
+            });
+
+            renderPagination(totalPages);
+        }
+
+        function renderPagination(totalPages) {
+            let paginationContainer = document.getElementById('pagination-container');
+
+            if (!paginationContainer) {
+                paginationContainer = document.createElement('div');
+                paginationContainer.id = 'pagination-container';
+                paginationContainer.className = 'pagination';
+                document.getElementById('blog-list-container').after(paginationContainer);
+            }
+
+            if (totalPages <= 1) {
+                paginationContainer.innerHTML = '';
+                return;
+            }
+
+            paginationContainer.innerHTML = `
+                <button class="pagination-btn" id="prev-btn" ${currentPage === 1 ? 'disabled' : ''}>&larr; Previous</button>
+                <span class="page-info">Page ${currentPage} of ${totalPages}</span>
+                <button class="pagination-btn" id="next-btn" ${currentPage === totalPages ? 'disabled' : ''}>Next &rarr;</button>
+            `;
+
+            document.getElementById('prev-btn').addEventListener('click', () => {
+                if (currentPage > 1) {
+                    currentPage--;
+                    renderBlogs();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+
+            document.getElementById('next-btn').addEventListener('click', () => {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    renderBlogs();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        }
+
+        function renderEmptyState() {
+            const container = document.getElementById('blog-list-container');
+            container.innerHTML = `
+                <div class="empty-state">
+                    <p>No blog posts found.</p>
+                </div>
+            `;
+            const paginationContainer = document.getElementById('pagination-container');
+            if (paginationContainer) paginationContainer.innerHTML = '';
+        }
+
+        function renderErrorState() {
+            const container = document.getElementById('blog-list-container');
+            container.innerHTML = `
+                <div class="error-state">
+                    <p>Failed to load blog posts. Please try again later.</p>
+                </div>
+            `;
+            const paginationContainer = document.getElementById('pagination-container');
+            if (paginationContainer) paginationContainer.innerHTML = '';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Blog Viewer - Toocels</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/images/awesome-circle.png">
+    <link rel="stylesheet" type="text/css" href="/bps/body.css">
+    <link rel="stylesheet" type="text/css" href="/bps/navbar/navbar.css">
+    <link rel="stylesheet" type="text/css" href="/bps/footer/footer.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Fira+Code:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- Marked Markdown Parser CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        :root {
+            --accent-color: #6366f1;
+            --accent-glow: rgba(99, 102, 241, 0.15);
+            --bg-card: #141414;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --border-color: #262626;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #0d0d0d;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1170px;
+            min-height: 80vh;
+            width: 100%;
+            margin: 0 auto;
+            padding: 120px 24px 80px 24px;
+            box-sizing: border-box;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            margin-bottom: 32px;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: var(--accent-color);
+            transform: translateX(-4px);
+        }
+
+        .blog-post {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 48px;
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+        }
+
+        @media(max-width: 768px) {
+            .blog-post {
+                padding: 24px;
+            }
+        }
+
+        /* Markdown Styling Rules */
+        .markdown-body {
+            line-height: 1.75;
+            font-size: 1.1rem;
+            color: #d1d5db;
+        }
+
+        .markdown-body h1,
+        .markdown-body h2,
+        .markdown-body h3,
+        .markdown-body h4 {
+            color: var(--text-primary);
+            font-weight: 700;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            line-height: 1.25;
+        }
+
+        .markdown-body h1 {
+            font-size: 2.2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 12px;
+            margin-top: 0;
+            background: linear-gradient(135deg, #f3f4f6 0%, #a5b4fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .markdown-body h2 {
+            font-size: 1.75rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        .markdown-body h3 {
+            font-size: 1.4rem;
+        }
+
+        .markdown-body p {
+            margin-top: 0;
+            margin-bottom: 1.25em;
+        }
+
+        .markdown-body a {
+            color: var(--accent-color);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--accent-color);
+            transition: all 0.2s ease;
+        }
+
+        .markdown-body a:hover {
+            color: #a5b4fc;
+            border-bottom-style: solid;
+        }
+
+        .markdown-body code {
+            font-family: 'Fira Code', monospace;
+            background-color: #1e1e1e;
+            padding: 3px 6px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            color: #f43f5e;
+            border: 1px solid #2e2e2e;
+        }
+
+        .markdown-body pre {
+            background-color: #1a1a1a;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            overflow-x: auto;
+            margin-bottom: 1.5em;
+        }
+
+        .markdown-body pre code {
+            background-color: transparent;
+            padding: 0;
+            border-radius: 0;
+            font-size: 0.95em;
+            color: #e2e8f0;
+            border: none;
+        }
+
+        .markdown-body blockquote {
+            border-left: 4px solid var(--accent-color);
+            background-color: rgba(99, 102, 241, 0.05);
+            padding: 16px 24px;
+            margin: 0 0 1.5em 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: #9ca3af;
+        }
+
+        .markdown-body ul,
+        .markdown-body ol {
+            margin-top: 0;
+            margin-bottom: 1.5em;
+            padding-left: 24px;
+        }
+
+        .markdown-body li {
+            margin-bottom: 0.5em;
+        }
+
+        .markdown-body img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin: 1.5em auto;
+            display: block;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+
+        .markdown-body hr {
+            height: 1px;
+            border: none;
+            background-color: var(--border-color);
+            margin: 2.5em 0;
+        }
+
+        /* Table Styling */
+        .markdown-body table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 2em 0;
+            border: 1px solid var(--border-color);
+            font-size: 0.95rem;
+        }
+
+        .markdown-body th,
+        .markdown-body td {
+            border: 1px solid var(--border-color);
+            padding: 12px 16px;
+            text-align: left;
+        }
+
+        .markdown-body th {
+            background-color: #1c1c1e;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .markdown-body tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        .error-state,
+        .loading-state {
+            text-align: center;
+            padding: 48px;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            color: var(--text-secondary);
+        }
+
+        .spinner {
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border-left-color: var(--accent-color);
+            animation: spin 1s linear infinite;
+            margin: 0 auto 16px auto;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div w3-include-html="/bps/navbar/navbar.html"></div>
+
+    <main>
+        <a href="/why-blogs" class="back-link">&larr; Back to blogs</a>
+
+        <div id="blog-content-container">
+            <div class="loading-state">
+                <div class="spinner"></div>
+                Loading blog post...
+            </div>
+        </div>
+    </main>
+
+    <div id="footer" w3-include-html="/bps/footer/footer.html"></div>
+
+    <script type="text/javascript" src="/bps/scripts/functions.js"></script>
+    <script type="text/javascript" src="/bps/scripts/include-html.js"></script>
+    <script type="text/javascript" src="/bps/navbar/navbar.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadBlogPost();
+        });
+
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        function loadBlogPost() {
+            const container = document.getElementById('blog-content-container');
+            const blogFile = getQueryParam('blog');
+
+            if (!blogFile) {
+                container.innerHTML = `
+                    <div class="error-state">
+                        <h2>Invalid Blog Request</h2>
+                        <p>No blog post was specified in the URL parameters.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Sanitize input to prevent absolute paths or directory traversal (security check)
+            const sanitizedFile = blogFile.replace(/[\/\\]/g, '');
+            if (!sanitizedFile.endsWith('.md')) {
+                container.innerHTML = `
+                    <div class="error-state">
+                        <h2>Invalid Blog Post</h2>
+                        <p>The requested blog post format is not supported.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Fetch the raw markdown content directly from the server
+            fetch(`/why-blogs/${encodeURIComponent(sanitizedFile)}`)
+                .then(res => {
+                    if (res.status === 404) {
+                        throw new Error('Blog post not found');
+                    }
+                    if (!res.ok) {
+                        throw new Error('Network error');
+                    }
+                    return res.text();
+                })
+                .then(markdown => {
+                    // Extract Heading using the format: heading-description-timestamp.md
+                    const timestampRegex = /-(\d{4}-\d{2}-\d{2}T\d{2}[-:]\d{2}[-:]\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:?\d{2})?)\.md$/i;
+                    const tsMatch = sanitizedFile.match(timestampRegex);
+
+                    let heading = sanitizedFile.replace(/\.md$/i, '');
+                    if (tsMatch) {
+                        const rest = sanitizedFile.slice(0, tsMatch.index);
+                        const firstHyphen = rest.indexOf('-');
+                        if (firstHyphen !== -1) {
+                            heading = rest.slice(0, firstHyphen);
+                        } else {
+                            heading = rest;
+                        }
+                    }
+
+                    // Format heading nicely
+                    heading = heading.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+                    document.title = `${heading} - Toocels`;
+
+                    // Parse and display
+                    const htmlContent = marked.parse(markdown);
+                    container.innerHTML = `
+                        <article class="blog-post markdown-body">
+                            ${htmlContent}
+                        </article>
+                    `;
+                })
+                .catch(err => {
+                    console.error('Error loading blog post:', err);
+                    container.innerHTML = `
+                        <div class="error-state">
+                            <h2>Blog Post Not Found</h2>
+                            <p>The requested blog post could not be loaded. It might have been moved or deleted.</p>
+                        </div>
+                    `;
+                });
+        }
+    </script>
+</body>
+
+</html>
