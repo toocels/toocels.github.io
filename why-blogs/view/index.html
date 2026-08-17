@@ -305,8 +305,8 @@
                 return;
             }
 
-            // Fetch the raw markdown content directly from the server
-            fetch(`/why-blogs/${encodeURIComponent(sanitizedFile)}`)
+            // Fetch the raw markdown content directly from GitHub CDN
+            fetch(`https://raw.githubusercontent.com/toocels/toocels.github.io/master/why-blogs/${encodeURIComponent(sanitizedFile)}`)
                 .then(res => {
                     if (res.status === 404) {
                         throw new Error('Blog post not found');

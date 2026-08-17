@@ -254,7 +254,7 @@
             // Regex to match ISO timestamp at the end: -YYYY-MM-DDTHH[-]mm[-]ss[Z].md
             const timestampRegex = /-(\d{4}-\d{2}-\d{2}T\d{2}[-:]\d{2}[-:]\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:?\d{2})?)\.md$/i;
             const tsMatch = filename.match(timestampRegex);
-            
+
             let heading = filename.replace(/\.md$/i, '');
             let description = '';
             let dateObj = new Date(0); // Epoch fallback
@@ -262,7 +262,7 @@
             if (tsMatch) {
                 const timestampStr = tsMatch[1];
                 const rest = filename.slice(0, tsMatch.index);
-                
+
                 const firstHyphen = rest.indexOf('-');
                 if (firstHyphen !== -1) {
                     heading = rest.slice(0, firstHyphen);
@@ -280,7 +280,7 @@
                     timePart = timePart.replace(/-/g, ':');
                     dateStr = datePart + 'T' + timePart;
                 }
-                
+
                 const parsedDate = new Date(dateStr);
                 if (!isNaN(parsedDate.getTime())) {
                     dateObj = parsedDate;
@@ -289,7 +289,7 @@
 
             // Format heading nicely: capitalize and remove separator hyphens
             heading = heading.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-            
+
             // Format description nicely if it exists
             if (description) {
                 description = description.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
@@ -306,7 +306,7 @@
         function fetchBlogs() {
             const container = document.getElementById('blog-list-container');
 
-            fetch('/api/why-blogs/')
+            fetch('https://api.github.com/repos/toocels/toocels.github.io/contents/why-blogs?ref=master')
                 .then(res => {
                     if (!res.ok) {
                         throw new Error('Network response was not ok');
@@ -314,14 +314,24 @@
                     return res.json();
                 })
                 .then(data => {
-                    if (!data.files || data.files.length === 0) {
+                    if (!Array.isArray(data) || data.length === 0) {
+                        renderEmptyState();
+                        return;
+                    }
+
+                    // Extract and filter markdown files
+                    const mdFiles = data
+                        .filter(item => item.type === 'file' && item.name.endsWith('.md'))
+                        .map(item => item.name);
+
+                    if (mdFiles.length === 0) {
                         renderEmptyState();
                         return;
                     }
 
                     // Parse and map all blogs
-                    allBlogs = data.files.map(file => parseBlogFilename(file));
-                    
+                    allBlogs = mdFiles.map(file => parseBlogFilename(file));
+
                     // Sort descending (latest first)
                     allBlogs.sort((a, b) => b.timestamp - a.timestamp);
 
