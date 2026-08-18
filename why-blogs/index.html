@@ -306,42 +306,60 @@
         function fetchBlogs() {
             const container = document.getElementById('blog-list-container');
 
-            fetch('https://api.github.com/repos/toocels/toocels.github.io/contents/why-blogs?ref=master')
+            // Try local API first
+            fetch('/api/why-blogs/')
                 .then(res => {
                     if (!res.ok) {
-                        throw new Error('Network response was not ok');
+                        throw new Error('Local API not OK');
                     }
                     return res.json();
                 })
                 .then(data => {
-                    if (!Array.isArray(data) || data.length === 0) {
-                        renderEmptyState();
-                        return;
+                    if (!data.files || !Array.isArray(data.files)) {
+                        throw new Error('Local API response invalid');
                     }
-
-                    // Extract and filter markdown files
-                    const mdFiles = data
-                        .filter(item => item.type === 'file' && item.name.endsWith('.md'))
-                        .map(item => item.name);
-
-                    if (mdFiles.length === 0) {
-                        renderEmptyState();
-                        return;
-                    }
-
-                    // Parse and map all blogs
-                    allBlogs = mdFiles.map(file => parseBlogFilename(file));
-
-                    // Sort descending (latest first)
-                    allBlogs.sort((a, b) => b.timestamp - a.timestamp);
-
-                    currentPage = 1;
-                    renderBlogs();
+                    handleBlogsList(data.files);
                 })
                 .catch(err => {
-                    console.error('Error fetching blogs:', err);
-                    renderErrorState();
+                    console.log('Local API failed, falling back to GitHub API:', err);
+                    // Fallback to GitHub API
+                    fetch('https://api.github.com/repos/toocels/toocels.github.io/contents/why-blogs?ref=master')
+                        .then(res => {
+                            if (!res.ok) {
+                                throw new Error('GitHub API response not ok');
+                            }
+                            return res.json();
+                        })
+                        .then(data => {
+                            if (!Array.isArray(data)) {
+                                throw new Error('GitHub API response not an array');
+                            }
+                            const mdFiles = data
+                                .filter(item => item.type === 'file' && item.name.endsWith('.md'))
+                                .map(item => item.name);
+                            handleBlogsList(mdFiles);
+                        })
+                        .catch(githubErr => {
+                            console.error('Failed to load blogs from both local API and GitHub:', githubErr);
+                            renderErrorState();
+                        });
                 });
+        }
+
+        function handleBlogsList(mdFiles) {
+            if (mdFiles.length === 0) {
+                renderEmptyState();
+                return;
+            }
+
+            // Parse and map all blogs
+            allBlogs = mdFiles.map(file => parseBlogFilename(file));
+            
+            // Sort descending (latest first)
+            allBlogs.sort((a, b) => b.timestamp - a.timestamp);
+
+            currentPage = 1;
+            renderBlogs();
         }
 
         function renderBlogs() {

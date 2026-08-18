@@ -305,16 +305,23 @@
                 return;
             }
 
-            // Fetch the raw markdown content directly from GitHub CDN
-            fetch(`https://raw.githubusercontent.com/toocels/toocels.github.io/master/why-blogs/${encodeURIComponent(sanitizedFile)}`)
+            // Try fetching from local server first, fallback to GitHub if it fails
+            fetch(`/why-blogs/${encodeURIComponent(sanitizedFile)}`)
                 .then(res => {
-                    if (res.status === 404) {
-                        throw new Error('Blog post not found');
-                    }
                     if (!res.ok) {
-                        throw new Error('Network error');
+                        throw new Error('Local fetch failed');
                     }
                     return res.text();
+                })
+                .catch(err => {
+                    console.log('Local fetch failed, trying GitHub raw CDN:', err);
+                    return fetch(`https://raw.githubusercontent.com/toocels/toocels.github.io/master/why-blogs/${encodeURIComponent(sanitizedFile)}`)
+                        .then(res => {
+                            if (!res.ok) {
+                                throw new Error('GitHub raw fetch failed');
+                            }
+                            return res.text();
+                        });
                 })
                 .then(markdown => {
                     // Extract Heading using the format: heading-description-timestamp.md
