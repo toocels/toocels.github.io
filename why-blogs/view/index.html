@@ -183,6 +183,13 @@
             margin: 1.5em auto;
             display: block;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            cursor: zoom-in;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .markdown-body img:hover {
+            transform: scale(1.01);
+            box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.4), 0 0 0 2px var(--accent-glow);
         }
 
         .markdown-body hr {
@@ -247,6 +254,93 @@
                 transform: rotate(360deg);
             }
         }
+
+        /* Image Lightbox & Zoom */
+        .image-lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease;
+            padding: 24px;
+            box-sizing: border-box;
+            user-select: none;
+        }
+
+        .image-lightbox.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .lightbox-content-wrapper {
+            position: relative;
+            max-width: 90vw;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-img {
+            max-width: 90vw;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            cursor: zoom-in;
+            transition: transform 0.25s cubic-bezier(0.2, 0, 0.2, 1);
+            transform-origin: center center;
+        }
+
+        .lightbox-img.zoomed {
+            cursor: zoom-out;
+            transform: scale(1.65);
+        }
+
+        .lightbox-caption {
+            margin-top: 14px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            text-align: center;
+            max-width: 800px;
+        }
+
+        .lightbox-close-btn {
+            position: absolute;
+            top: 24px;
+            right: 28px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: var(--text-primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            z-index: 10000;
+        }
+
+        .lightbox-close-btn:hover {
+            background: var(--accent-color);
+            color: #fff;
+            transform: scale(1.08);
+        }
     </style>
 </head>
 
@@ -264,6 +358,15 @@
         </div>
     </main>
 
+    <!-- Lightbox Modal -->
+    <div id="image-lightbox" class="image-lightbox" aria-hidden="true">
+        <button class="lightbox-close-btn" id="lightbox-close" aria-label="Close image">&times;</button>
+        <div class="lightbox-content-wrapper" id="lightbox-wrapper">
+            <img id="lightbox-img" class="lightbox-img" src="" alt="">
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+        </div>
+    </div>
+
     <div id="footer" w3-include-html="/bps/footer/footer.html"></div>
 
     <script type="text/javascript" src="/bps/scripts/functions.js"></script>
@@ -271,12 +374,72 @@
     <script type="text/javascript" src="/bps/navbar/navbar.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            setupLightbox();
             loadBlogPost();
         });
 
         function getQueryParam(name) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(name);
+        }
+
+        function setupLightbox() {
+            const lightbox = document.getElementById('image-lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const closeBtn = document.getElementById('lightbox-close');
+
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                lightbox.setAttribute('aria-hidden', 'true');
+                lightboxImg.classList.remove('zoomed');
+                document.body.style.overflow = '';
+            }
+
+            // Click outside the image content to close
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox || e.target === closeBtn) {
+                    closeLightbox();
+                }
+            });
+
+            // Toggle zoom on image click
+            lightboxImg.addEventListener('click', (e) => {
+                e.stopPropagation();
+                lightboxImg.classList.toggle('zoomed');
+            });
+
+            // Close on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                    closeLightbox();
+                }
+            });
+        }
+
+        function openLightbox(src, captionText, altText) {
+            const lightbox = document.getElementById('image-lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+
+            lightboxImg.src = src;
+            lightboxImg.alt = altText || '';
+            lightboxImg.classList.remove('zoomed');
+            lightboxCaption.textContent = captionText || altText || '';
+
+            lightbox.classList.add('active');
+            lightbox.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function attachImageListeners() {
+            const images = document.querySelectorAll('.markdown-body img');
+            images.forEach(img => {
+                img.addEventListener('click', () => {
+                    const caption = img.getAttribute('title') || img.getAttribute('alt') || '';
+                    openLightbox(img.src, caption, img.alt);
+                });
+            });
         }
 
         function loadBlogPost() {
@@ -324,18 +487,28 @@
                         });
                 })
                 .then(markdown => {
-                    // Extract Heading using the format: heading-description-timestamp.md
-                    const timestampRegex = /-(\d{4}-\d{2}-\d{2}T\d{2}[-:]\d{2}[-:]\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:?\d{2})?)\.md$/i;
+                    // Extract Heading using the format: heading--description--timestamp.md or heading-description-timestamp.md
+                    const timestampRegex = /-+(\d{4}-\d{2}-\d{2}T\d{2}[-:]\d{2}[-:]\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:?\d{2})?)\.md$/i;
                     const tsMatch = sanitizedFile.match(timestampRegex);
 
                     let heading = sanitizedFile.replace(/\.md$/i, '');
                     if (tsMatch) {
-                        const rest = sanitizedFile.slice(0, tsMatch.index);
-                        const firstHyphen = rest.indexOf('-');
-                        if (firstHyphen !== -1) {
-                            heading = rest.slice(0, firstHyphen);
+                        const rest = sanitizedFile.slice(0, tsMatch.index).replace(/-+$/, '');
+                        const isDoubleHyphenFormat = /--\d{4}-\d{2}-\d{2}/.test(sanitizedFile) || rest.includes('--');
+
+                        if (isDoubleHyphenFormat) {
+                            if (rest.includes('--')) {
+                                heading = rest.slice(0, rest.indexOf('--'));
+                            } else {
+                                heading = rest;
+                            }
                         } else {
-                            heading = rest;
+                            const firstHyphen = rest.indexOf('-');
+                            if (firstHyphen !== -1) {
+                                heading = rest.slice(0, firstHyphen);
+                            } else {
+                                heading = rest;
+                            }
                         }
                     }
 
@@ -350,6 +523,9 @@
                             ${htmlContent}
                         </article>
                     `;
+
+                    // Attach lightbox click events to all rendered images
+                    attachImageListeners();
                 })
                 .catch(err => {
                     console.error('Error loading blog post:', err);

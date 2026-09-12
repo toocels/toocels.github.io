@@ -251,8 +251,8 @@
         });
 
         function parseBlogFilename(filename) {
-            // Regex to match ISO timestamp at the end: -YYYY-MM-DDTHH[-]mm[-]ss[Z].md
-            const timestampRegex = /-(\d{4}-\d{2}-\d{2}T\d{2}[-:]\d{2}[-:]\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:?\d{2})?)\.md$/i;
+            // Regex to match ISO timestamp at the end: -+YYYY-MM-DDTHH[-]mm[-]ss[Z].md
+            const timestampRegex = /-+(\d{4}-\d{2}-\d{2}T\d{2}[-:]\d{2}[-:]\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:?\d{2})?)\.md$/i;
             const tsMatch = filename.match(timestampRegex);
 
             let heading = filename.replace(/\.md$/i, '');
@@ -261,14 +261,29 @@
 
             if (tsMatch) {
                 const timestampStr = tsMatch[1];
-                const rest = filename.slice(0, tsMatch.index);
+                const rest = filename.slice(0, tsMatch.index).replace(/-+$/, '');
 
-                const firstHyphen = rest.indexOf('-');
-                if (firstHyphen !== -1) {
-                    heading = rest.slice(0, firstHyphen);
-                    description = rest.slice(firstHyphen + 1);
+                const isDoubleHyphenFormat = /--\d{4}-\d{2}-\d{2}/.test(filename) || rest.includes('--');
+
+                if (isDoubleHyphenFormat) {
+                    // Double hyphen convention: Heading--Description--Timestamp or Heading--Timestamp
+                    if (rest.includes('--')) {
+                        const separatorIndex = rest.indexOf('--');
+                        heading = rest.slice(0, separatorIndex);
+                        description = rest.slice(separatorIndex + 2);
+                    } else {
+                        heading = rest;
+                        description = '';
+                    }
                 } else {
-                    heading = rest;
+                    // Legacy single hyphen fallback: Heading-Description-Timestamp
+                    const firstHyphen = rest.indexOf('-');
+                    if (firstHyphen !== -1) {
+                        heading = rest.slice(0, firstHyphen);
+                        description = rest.slice(firstHyphen + 1);
+                    } else {
+                        heading = rest;
+                    }
                 }
 
                 // Normalise timestamp format: convert hyphens in the time segment to colons
