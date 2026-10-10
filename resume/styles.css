@@ -279,7 +279,7 @@ section h3 {
         max-width: 100% !important;
         width: 1200px !important; /* Matches your script */
         margin: 0 !important;
-        padding: 10px 25px 15px 25px !important; /* Reduced padding for more space */
+        padding: 5px 25px 8px 25px !important; /* Reduced padding for more space */
         box-shadow: none !important;
         border-radius: 0 !important;
         page-break-after: auto;
@@ -366,9 +366,9 @@ section h3 {
         color: #0a2540 !important;
         background: #e8ecef !important;
         background-color: #e8ecef !important;
-        padding: 7px 0 !important; /* Reduced padding */
+        padding: 5px 0 !important;
         text-align: center !important;
-        margin-bottom: 12px !important; /* Reduced margin */
+        margin-bottom: 6px !important;
         font-weight: 700 !important;
         border-radius: 4px !important;
         -webkit-print-color-adjust: exact !important;
@@ -377,12 +377,12 @@ section h3 {
 
     /* Compact sections */
     section {
-        margin-bottom: 16px !important; /* Reduced from 20px */
+        margin-bottom: 10px !important; /* Reduced from 20px */
     }
 
     /* Summary section - more compact */
     .summary {
-        margin-bottom: 18px !important;
+        margin-bottom: 12px !important;
     }
 
     .summary p {
@@ -394,7 +394,7 @@ section h3 {
     .job,
     .project,
     .education-item {
-        margin-bottom: 14px !important; /* Reduced from 18px */
+        margin-bottom: 10px !important;
         display: grid !important;
         grid-template-columns: 120px 1fr !important; /* Slightly smaller date column */
         gap: 18px !important; /* Reduced gap */
