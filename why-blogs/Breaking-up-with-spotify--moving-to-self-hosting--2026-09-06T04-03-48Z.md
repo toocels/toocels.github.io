@@ -11,9 +11,9 @@ I didn't download many songs during that time, ig. And what I had was more than 
 
 Up until now, I kinda only had a PC to play songs, and when I had my PC, I wouldn't listen to music much. I started listening to songs a lot only when I got my own phone. And I was still using downloaded songs up until then.
 
-But soon I realised, nah, this was toooo annoying. Downloading songs *legally* and loading them onto my phone was a pain. Also, that's when I got introduced to Spotify.
+But soon I realised, nah, this was toooo annoying. Downloading songs _legally_ and loading them onto my phone was a pain. Also, that's when I got introduced to Spotify.
 
-I really liked the recommendations and easy adding to playlists. No need to scour the internet for a clean copy. (Insane how most of the songs I *legally* downloaded had movie dialogues lol, because of the sources I was choosing.)
+I really liked the recommendations and easy adding to playlists. No need to scour the internet for a clean copy. (Insane how most of the songs I _legally_ downloaded had movie dialogues lol, because of the sources I was choosing.)
 
 I eventually chose Spotify because of the recommendations 🤌. Not saying it's peak, but it's a feature I was missing.
 
@@ -29,11 +29,11 @@ This sounded reasonable, because they only had the movie version. I thought mayb
 
 But BRUH.
 
-I fucking just found out that from the *Nanban* movie, like the majority of the songs are not here???
+I fucking just found out that from the _Nanban_ movie, like the majority of the songs are not here???
 
 HUHH???
 
-*Heartiley Batter*???
+_Heartiley Batter_???
 
 WHERE IS IT SPOTIFY?? WHYYY??
 
@@ -41,7 +41,7 @@ SERIOUSLY??
 
 HOW MANY MORE SONGS ARE YOU HIDING FROM ME??
 
-*crack*
+_crack_
 
 The breaking point where I lost trust in Spotify.
 
@@ -53,8 +53,7 @@ Discoverability was the one reason I was staying on Spotify, and now, knowing Sp
 
 <img src="/images/spotify_sucks.jpeg" width="500" title="A picture of Spotify 'Nanban' playlist with most songs not available">
 
-*edit: later found those songs were not available cuz of offline status or something, but still apna time aayega was not there*
-
+_edit: later found those songs were not available cuz of offline status or something, but still apna time aayega was not there_
 
 Well, after the big ranting from above, let's get to the important stuff.
 
@@ -64,17 +63,17 @@ It can be easily self-hosted in Docker. I have mine behind my Nginx (I'll create
 
 Let me dump my tech stack:
 
-* Navidrome running in Docker
-* For listening on my laptop, I use the **Feishin** app
-* For listening on Android, I settled on **Amcyf Music**
-* I *legally* bought my copies from Spotify, JioSaavn, and YouTube
+- Navidrome running in Docker
+- For listening on my laptop, I use the **Feishin** app
+- For listening on Android, I settled on **Symfonium Music**
+- I _allegedly legally_ bought my copies from Spotify, JioSaavn, and YouTube
 
 Below are some of my storefronts:
 
-* *redacted*
-* *redacted*
-* *redacted*
-* *redacted*
+- _redacted_
+- _redacted_
+- _redacted_
+- _redacted_
 
 Then there is the tool called **Picard**, a music tagger tool. It was pretty useful in organising my songs into proper albums.
 
@@ -102,8 +101,8 @@ I (Claude) wrote a bunch of scripts. One will extract a Spotify playlist and col
 
 Then another, 2nd script will either algorithmically or using an LLM find the equivalent JioSaavn album.
 
-And the 3rd script will *legally* buy all those albums off JioSaavn.
+And the 3rd script will _legally_ buy all those albums off JioSaavn.
 
 And now, no one can take my music away from me lol. MWAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA!
-*yeah day 1 im starting with like 1.2k albums and 10k songs lol.*
+_yeah day 1 im starting with like 1.2k albums and 10k songs lol._
 <img src="/images/spotify_sucks_2.png" width="500" title="My navidrome collection">

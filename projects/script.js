@@ -102,6 +102,30 @@ var projects = [
     link: "https://demo.opencti.io/dashboard",
     img: "./banners/opencti.png",
   },
+  {
+    head: "Homelab",
+    text: "Self-hosted homelab built with Docker Compose stacks, one directory per service, managed via Dockge. Nginx handles reverse proxy and TLS termination, with Beszel monitoring the server and containers.",
+    link: "https://github.com/toocels/homelab",
+    img: "../images/homelab.png",
+  },
+  {
+    head: "Clip Move Recent Down",
+    text: "A tiny GNOME Shell extension that pushes the newest entry in GNOME Clipboard History down the list by 50 positions via a terminal command or Ctrl+I, without deleting or pasting it. Clipboard History exposes no D-Bus interface or CLI for reordering, so this works around GNOME gating org.gnome.Shell.Eval.",
+    link: "https://github.com/toocels/clip-move-recent-down",
+    img: "../images/clip-move-recent-down.png",
+  },
+  {
+    head: "Arch ISO Builder",
+    text: "A modular automation suite that generates customized, bootable Arch Linux live ISO installation media with bundled offline package repositories and automated installation workflows.",
+    link: "https://github.com/toocels/archiso",
+    img: "../images/archiso.png",
+  },
+  {
+    head: "GNOME App Menu Gradient Sorter",
+    text: "A fast, terminal-based Rust CLI tool that organizes the GNOME Shell application grid, sorting apps into a smooth rainbow gradient by icon color, alphabetically, or randomly, while safely backing up the existing layout.",
+    link: "https://github.com/toocels/gnome_appmenu_sort",
+    img: "../images/gnome-app-menu-sort.png",
+  },
 ];
 
 var elem = document.querySelector(".row");
