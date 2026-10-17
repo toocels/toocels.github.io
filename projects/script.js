@@ -126,6 +126,12 @@ var projects = [
     link: "https://github.com/toocels/gnome_appmenu_sort",
     img: "../images/gnome-app-menu-sort.png",
   },
+  {
+    head: "CPU Rank Finder (PassMark)",
+    text: "A Chrome extension that scans the current webpage for CPU information across all brands and injects its benchmark ranking from PassMark inline right on the page. Eliminates the burden of guessing CPU performance tiers and makes cross-brand comparisons effortless.",
+    link: "https://github.com/toocels/laptop_ranker_extension",
+    img: "../images/laptopFinder.png",
+  },
 ];
 
 var elem = document.querySelector(".row");
