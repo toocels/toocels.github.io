@@ -132,6 +132,12 @@ var projects = [
     link: "https://github.com/toocels/laptop_ranker_extension",
     img: "../images/laptopFinder.png",
   },
+  {
+    head: "Strict Workspace Switcher",
+    text: "A GNOME Shell extension that makes the switchers' current-workspace-only mode actually workspace-local. A window on another workspace that wants attention - a chat app, a build, Steam - no longer shows up in this workspace's Alt+Tab, so Enter can't throw you onto that other workspace mid-task. It patches the single place GNOME builds the tab list, and there is nothing to configure: enabled means strict.",
+    link: "https://github.com/toocels/strict-workspace-switcher",
+    img: "../images/strict-workspace-switcher.png",
+  },
 ];
 
 var elem = document.querySelector(".row");
