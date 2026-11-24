@@ -92,6 +92,11 @@ main {
     text-decoration: underline;
 }
 
+/* Full URLs are only shown when printing / exporting as PDF */
+.print-url {
+    display: none;
+}
+
 /* Section Styles */
 section {
     margin-bottom: 25px;
@@ -358,6 +363,15 @@ section h3 {
         border: 1px solid #000 !important;
         font-size: 11px !important;
         border-radius: 2px !important;
+    }
+
+    /* Expand shortened social handles to full URLs on print */
+    .social-links .screen-url {
+        display: none !important;
+    }
+
+    .social-links .print-url {
+        display: inline !important;
     }
 
     /* Maintain section headers with background */
